@@ -1,3 +1,4 @@
+import { Colors } from 'theme/colors';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -6,6 +7,5 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     height: 100vh;
-    width: 100vw;
-    background-color: red;
+    background-color: ${Colors.background};
 `;
