@@ -1,9 +1,10 @@
-import {Container} from '@styles/index'
+import {BottomRightGradient, Container, Glass, TopLeftGradient} from '@styles/index'
 
 export default function Home() {
   return (
    <Container>
-    <div className="glass-container">
+    <TopLeftGradient/>
+    <Glass>
       <div className="header"></div>
       <div className="content">
         <div className="image"></div>
@@ -12,7 +13,8 @@ export default function Home() {
           <div className="description"></div>
         </div>
         </div>
-    </div>
+        </Glass>
+        <BottomRightGradient/>
     </Container>
   )
 }
