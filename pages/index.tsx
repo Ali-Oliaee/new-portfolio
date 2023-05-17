@@ -1,4 +1,4 @@
-import {Container} from '../styles/index'
+import {Container} from '@styles/index'
 
 export default function Home() {
   return (
