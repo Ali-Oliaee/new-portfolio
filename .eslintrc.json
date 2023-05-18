@@ -17,7 +17,12 @@
         "no-undef": "off",
         "no-unused-vars": "error",
         "semi": ["error", "never"],
-        "react/react-in-jsx-scope": "off"
+        "react/react-in-jsx-scope": "off",
+        "quotes": ["error", "single"],
+        "indent": ["error", 2],
+        "max-len": ["error", { "code": 80 }],
+        "linebreak-style": ["error", "unix"],
+        "eol-last": ["error", "always"]
       }
     }
   ]
