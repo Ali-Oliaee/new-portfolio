@@ -1,5 +1,5 @@
-import { Colors } from 'theme/colors';
-import styled from 'styled-components';
+import { Colors } from 'theme/colors'
+import styled from 'styled-components'
 
 export const Container = styled.div`
     display: flex;
@@ -7,7 +7,7 @@ export const Container = styled.div`
     justify-content: center;
     height: 100vh;
     background-color: ${Colors.background};
-`;
+`
 
 export const Glass = styled.div`
     display: flex;
@@ -17,14 +17,15 @@ export const Glass = styled.div`
     background-color: rgba( 255, 255, 255, 0.10 );
     width: 90%;
     height: 80%;
-    border-radius: 20px;
     backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(4px);
-    border-color: rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.9);
-    border-width: 1px;
+    border-image: linear-gradient(to right, rgba( 255, 255, 255, 0.5 ), rgba( 255, 255, 255, 0.10 )) 4;
+    border-radius: 20px;
+    border-width: 4px;
     border-style: solid;
-    position: relative;
     z-index: 2;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px) brightness(120%) saturate(120%);
+    opacity: 0.8;
 `
 
 export const TopLeftGradient = styled.div`

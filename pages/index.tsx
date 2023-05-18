@@ -1,6 +1,6 @@
 import {BottomRightGradient, Container, Glass, TopLeftGradient} from '@styles/index'
 
-export default function Home() {
+const HomePage: React.FC = ()  =>{
   return (
    <Container>
     <TopLeftGradient/>
@@ -12,9 +12,11 @@ export default function Home() {
           <div className="title"></div>
           <div className="description"></div>
         </div>
-        </div>
+      </div>
         </Glass>
         <BottomRightGradient/>
     </Container>
   )
 }
+
+export default  HomePage
