@@ -9,6 +9,7 @@ import {BluePill, BottomRightGradient,
   LogoName,
   MobileText,
   OrangeCube,
+  PurpleOrbit,
   StartButton,
   StartButtonText,
   Title,
@@ -77,6 +78,14 @@ const HomePage: React.FC = ()  =>{
             height={500}
           />
         </Content>
+        <PurpleOrbit>
+          <Image
+            src='/super-toroid-purple-glossy.svg'
+            alt='super toroid purple'
+            width={100}
+            height={74}
+          />
+        </PurpleOrbit>
         <OrangeCube>
           <Image
             src='/round-cube-orange-glossy.svg'

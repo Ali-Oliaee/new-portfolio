@@ -135,5 +135,10 @@ export const YellowOrbit = styled.div`
     position: absolute;
     bottom: -10px;
     right: -20px;
-    z-index: 1;
+    z-index: 2;
 `
+export const PurpleOrbit = styled.div`
+    position: absolute;
+    top: 80px;
+    right: 30%;
+` 
