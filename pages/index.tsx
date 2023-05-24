@@ -1,4 +1,4 @@
-import {BottomRightGradient, 
+import {BluePill, BottomRightGradient, 
   Container,
   Content,
   Description,
@@ -8,11 +8,13 @@ import {BottomRightGradient,
   InfoContainer,
   LogoName,
   MobileText,
+  OrangeCube,
   StartButton,
   StartButtonText,
   Title,
   TopLeftGradient,
-  WebText
+  WebText,
+  YellowOrbit
 } from '@styles/index'
 import Image from 'next/image'
 
@@ -75,7 +77,31 @@ const HomePage: React.FC = ()  =>{
             height={500}
           />
         </Content>
+        <OrangeCube>
+          <Image
+            src='/round-cube-orange-glossy.svg'
+            alt='orange cube'
+            width={94}
+            height={93}
+          />
+        </OrangeCube>
       </Glass>
+      <BluePill>
+        <Image
+          src='/pill-blue-glossy.svg'
+          alt='pill blue'
+          width={151}
+          height={230}
+        />
+      </BluePill>
+      <YellowOrbit>
+        <Image
+          src='/super-toroid-yellow-glossy.svg'
+          alt='super toroid yellow'
+          width={200}
+          height={280}
+        />
+      </YellowOrbit>
       <BottomRightGradient/>
     </Container>
   )

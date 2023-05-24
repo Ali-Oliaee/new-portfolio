@@ -7,10 +7,11 @@ export const Container = styled.div`
     justify-content: center;
     height: 100vh;
     background-color: ${Colors.background};
+    position: relative;
 `
 export const Glass = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     align-items: center;
     justify-content: flex-start;
     width: 90%;
@@ -18,6 +19,8 @@ export const Glass = styled.div`
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     border-radius: 30px;
     backdrop-filter: blur(10px) brightness(120%) saturate(100%);
+    position: relative;
+    z-index: 99;
 `
 export const Header = styled.div`
     align-items: center;
@@ -64,13 +67,14 @@ export const MobileText = styled.span`
 `
 export const WebText = styled.span`
     font-size: 2rem;
-    color: #8B5CF6;
+    background: linear-gradient(to bottom, #EC4899, #8B5CF6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 `
 export const Description = styled.p`
     font-size: 1.5rem;
     color: #fff;
     max-width: 600px;
-    
 `
 export const StartButton = styled.button`
     display: flex;
@@ -114,5 +118,22 @@ export const BottomRightGradient = styled.div`
     height: 25%;
     background: linear-gradient( #00C2FF 0%, #FF29C3 100%);
     border-radius: 50%;
+    z-index: 1;
+`
+export const OrangeCube = styled.div`
+    position: absolute;
+    bottom: -50px;
+    right: 40%;
+`
+export const BluePill = styled.div`
+    position: absolute;
+    bottom: 120px;
+    left: -20px;
+    z-index: 100;
+`
+export const YellowOrbit = styled.div`
+    position: absolute;
+    bottom: -10px;
+    right: -20px;
     z-index: 1;
 `
