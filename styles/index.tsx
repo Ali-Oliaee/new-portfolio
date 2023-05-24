@@ -54,6 +54,7 @@ export const Title = styled.h1`
     font-size: 2rem;
     color: #fff;
     font-weight: 700;
+    margin-block: 0;
 `
 export const MobileText = styled.span`
     font-size: 2rem;
@@ -68,7 +69,8 @@ export const WebText = styled.span`
 export const Description = styled.p`
     font-size: 1.5rem;
     color: #fff;
-    font-weight: 400;
+    max-width: 600px;
+    
 `
 export const StartButton = styled.button`
     display: flex;
@@ -76,7 +78,8 @@ export const StartButton = styled.button`
     justify-content: space-between;
     background-color: #F2672E;
     color: #fff;
-    font-size: 1.5rem;
+    margin-block: 20px;
+    font-size: 1em;
     font-weight: 700;
     border-radius: 10px;
     padding: 10px 40px;
@@ -85,6 +88,7 @@ export const StartButton = styled.button`
     transition: 0.3s;
     &:hover{
         background-color: #EF4444;
+        padding-inline-start: 50px;
     }
 `
 export const StartButtonText = styled.span`
