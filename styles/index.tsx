@@ -35,6 +35,20 @@ export const HeaderMenu = styled.div`
     justify-content: space-between;
     margin-inline-end: 30px;
 `
+export const LanguageSelect = styled.select`
+    min-width: 40px;
+    color: #fff;
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    font-size: 1.1em;
+    font-weight: bold;
+    outline: 0;
+    margin-inline-end: 10px;
+`
+export const LanguageOption = styled.option``
 export const LogoName = styled.h1`
     font-size: 1.5rem;
     color: #fff;
@@ -133,10 +147,10 @@ export const BluePill = styled.div`
 `
 export const YellowOrbit = styled.div`
     position: absolute;
-    bottom: -10px;
-    right: -20px;
+    bottom: -40px;
+    right: -40px;
     z-index: 2;
-`
+` 
 export const PurpleOrbit = styled.div`
     position: absolute;
     top: 80px;

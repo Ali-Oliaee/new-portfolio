@@ -6,6 +6,8 @@ import {BluePill, BottomRightGradient,
   Header,
   HeaderMenu,
   InfoContainer,
+  LanguageOption,
+  LanguageSelect,
   LogoName,
   MobileText,
   OrangeCube,
@@ -27,7 +29,10 @@ const HomePage: React.FC = ()  =>{
         <Header>
           <LogoName>Ali</LogoName>
           <HeaderMenu>
-          EN
+            <LanguageSelect>
+              <LanguageOption>En</LanguageOption>
+              <LanguageOption>Fa</LanguageOption>
+            </LanguageSelect>
             <Image
               src="/moon.svg"
               alt="moon"
