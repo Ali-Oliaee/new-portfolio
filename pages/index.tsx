@@ -4,11 +4,15 @@ import {BottomRightGradient,
   Description,
   Glass,
   Header,
+  HeaderMenu,
   InfoContainer,
   LogoName,
+  MobileText,
   StartButton,
+  StartButtonText,
   Title,
-  TopLeftGradient
+  TopLeftGradient,
+  WebText
 } from '@styles/index'
 import Image from 'next/image'
 
@@ -19,15 +23,15 @@ const HomePage: React.FC = ()  =>{
       <Glass>
         <Header>
           <LogoName>Ali</LogoName>
-          <div className="menu">
+          <HeaderMenu>
           EN
             <Image
-              src="/Moon.svg"
+              src="/moon.svg"
               alt="moon"
               width={30}
               height={30}
             />
-          </div>
+          </HeaderMenu>
         </Header>
         <Content>
           <InfoContainer>
@@ -35,7 +39,14 @@ const HomePage: React.FC = ()  =>{
               Hi! I’m Ali
             </Title>
             <Title>
-              Mobile and Web Developer
+              <MobileText>
+                Mobile{' '}
+              </MobileText>
+               and {' '}
+              <WebText>
+               Web{' '}
+              </WebText>
+              Developer
             </Title>
             <Description>
             Welcome to my portfolio!
@@ -45,10 +56,20 @@ const HomePage: React.FC = ()  =>{
             that exceed my client&apos;s expectations. Let&apos;s work together 
             to bring your ideas to life!
             </Description>
-            <StartButton>Start a project</StartButton>
+            <StartButton>
+              <StartButtonText>
+                Get Started
+              </StartButtonText>
+              <Image
+                src="/right-arrow.svg"
+                alt="arrow-right"
+                width={30}
+                height={30}
+              />
+            </StartButton>
           </InfoContainer>
           <Image
-            src="/FloatPerson.svg"
+            src="/float-person.svg"
             alt="Picture of the author"
             width={500}
             height={500}
