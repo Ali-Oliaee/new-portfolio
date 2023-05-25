@@ -76,12 +76,16 @@ const HomePage: React.FC = ()  =>{
               />
             </StartButton>
           </InfoContainer>
-          <Image
-            src="/float-person.svg"
-            alt="Picture of the author"
-            width={500}
-            height={500}
-          />
+          <div  style={{width: '50%'}}>
+
+            <Image
+              src="/float-person.svg"
+              alt="Picture of the author"
+              layout='responsive'
+              width={500}
+              height={500}
+            />
+          </div>
         </Content>
         <PurpleOrbit>
           <Image

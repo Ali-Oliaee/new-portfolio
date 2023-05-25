@@ -1,5 +1,6 @@
 import { Colors } from 'theme/colors'
 import styled from 'styled-components'
+import { BreakPoints } from 'theme/breakpoints'
 
 export const Container = styled.div`
     display: flex;
@@ -37,7 +38,7 @@ export const HeaderMenu = styled.div`
 `
 export const LanguageSelect = styled.select`
     min-width: 40px;
-    color: #fff;
+    color: ${Colors.white};
     background: transparent;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -51,7 +52,7 @@ export const LanguageSelect = styled.select`
 export const LanguageOption = styled.option``
 export const LogoName = styled.h1`
     font-size: 1.5rem;
-    color: #fff;
+    color: ${Colors.white};
     font-weight: 700;
     margin-inline-start: 30px;
 `
@@ -60,18 +61,36 @@ export const Content = styled.div`
     align-items: center;
     justify-content: space-between;
     padding-inline: 40px;
+
+    @media (max-width: ${BreakPoints.md}px){
+        padding-inline: 20px;
+    }
+    @media (max-width: ${BreakPoints.sm}px){
+        flex-direction: column-reverse;
+    }
 `
 export const InfoContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    max-width: 50%;
+
+    @media (max-width: ${BreakPoints.sm}px){
+        text-align: center;
+        max-width: 100%;
+    }
 `
 export const Title = styled.h1`
     font-size: 2rem;
-    color: #fff;
+    color: ${Colors.white};
     font-weight: 700;
     margin-block: 0;
+
+    @media (max-width: ${BreakPoints.sm}px){
+        text-align: center;
+        width: 100%;
+    }
 `
 export const MobileText = styled.span`
     font-size: 2rem;
@@ -86,16 +105,24 @@ export const WebText = styled.span`
     -webkit-text-fill-color: transparent;
 `
 export const Description = styled.p`
-    font-size: 1.5rem;
-    color: #fff;
+    font-size: 1.5em;
+    color: ${Colors.white};
     max-width: 600px;
+
+    @media (max-width: ${BreakPoints.lg}px){
+        font-size: 1.1em;
+    }
+    @media (max-width: ${BreakPoints.sm}px){
+        text-align: center;
+        max-width: 100%;
+    }
 `
 export const StartButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #F2672E;
-    color: #fff;
+    color: ${Colors.white};
     margin-block: 20px;
     font-size: 1em;
     font-weight: 700;
@@ -104,9 +131,14 @@ export const StartButton = styled.button`
     border: none;
     cursor: pointer;
     transition: 0.3s;
+    
     &:hover{
         background-color: #EF4444;
         padding-inline-start: 50px;
+    }
+
+    @media (max-width: ${BreakPoints.sm}px){
+        align-self: center;
     }
 `
 export const StartButtonText = styled.span`
@@ -138,12 +170,28 @@ export const OrangeCube = styled.div`
     position: absolute;
     bottom: -50px;
     right: 40%;
+
+    @media (max-width: ${BreakPoints.sm}px){
+        top: 100px;
+        right: -40px;
+        bottom: unset;
+    }
 `
 export const BluePill = styled.div`
     position: absolute;
     bottom: 120px;
     left: -20px;
     z-index: 100;
+
+    @media (max-width: ${BreakPoints.md}px){
+        bottom: unset;
+        top: 0px;
+        z-index: 1;
+    }
+
+    @media (max-width: ${BreakPoints.sm}px){
+        bottom: -40px;
+    }
 `
 export const YellowOrbit = styled.div`
     position: absolute;
@@ -155,4 +203,9 @@ export const PurpleOrbit = styled.div`
     position: absolute;
     top: 80px;
     right: 30%;
+    
+    @media (max-width: ${BreakPoints.sm}px){
+        right: unset;
+        left: 40px;
+    }
 ` 
