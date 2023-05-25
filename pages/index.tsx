@@ -5,6 +5,7 @@ import {BluePill, BottomRightGradient,
   Glass,
   Header,
   HeaderMenu,
+  ImageContainer,
   InfoContainer,
   LanguageOption,
   LanguageSelect,
@@ -76,8 +77,7 @@ const HomePage: React.FC = ()  =>{
               />
             </StartButton>
           </InfoContainer>
-          <div  style={{width: '50%'}}>
-
+          <ImageContainer style={{width: '50%'}}>
             <Image
               src="/float-person.svg"
               alt="Picture of the author"
@@ -85,7 +85,7 @@ const HomePage: React.FC = ()  =>{
               width={500}
               height={500}
             />
-          </div>
+          </ImageContainer>
         </Content>
         <PurpleOrbit>
           <Image

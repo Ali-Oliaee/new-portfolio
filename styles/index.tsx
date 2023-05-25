@@ -69,6 +69,9 @@ export const Content = styled.div`
         flex-direction: column-reverse;
     }
 `
+export const ImageContainer = styled.div`
+    width: 50%;
+`
 export const InfoContainer = styled.div`
     display: flex;
     flex-direction: column;
