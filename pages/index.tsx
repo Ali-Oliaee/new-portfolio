@@ -1,4 +1,6 @@
-import {BluePill, BottomRightGradient, 
+import {
+  BluePill,
+  BottomRightGradient, 
   Container,
   Content,
   Description,
@@ -7,8 +9,6 @@ import {BluePill, BottomRightGradient,
   HeaderMenu,
   ImageContainer,
   InfoContainer,
-  LanguageOption,
-  LanguageSelect,
   LogoName,
   MobileText,
   OrangeCube,
@@ -21,8 +21,23 @@ import {BluePill, BottomRightGradient,
   YellowOrbit
 } from '@styles/index'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
+import { useTranslation } from 'next-i18next'
+import LanguageSelector from '@components/language-selector'
+import {serverSideTranslations} from 'next-i18next/serverSideTranslations'
 
-const HomePage: React.FC = ()  =>{
+export async function getStaticProps({ locale }: any) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common']))
+    },
+  }
+}
+
+const HomePage: React.FC = () => {
+  const { t } = useTranslation()
+  const router = useRouter()
+  
   return (
     <Container>
       <TopLeftGradient/>
@@ -30,10 +45,7 @@ const HomePage: React.FC = ()  =>{
         <Header>
           <LogoName>Ali</LogoName>
           <HeaderMenu>
-            <LanguageSelect>
-              <LanguageOption>En</LanguageOption>
-              <LanguageOption>Fa</LanguageOption>
-            </LanguageSelect>
+            <LanguageSelector/>
             <Image
               src="/moon.svg"
               alt="moon"
@@ -45,29 +57,25 @@ const HomePage: React.FC = ()  =>{
         <Content>
           <InfoContainer>
             <Title>
-              Hi! I’m Ali
+              {t('title1')}
             </Title>
             <Title>
+              {router.locale === 'fa' && t('developer')}{' '}
               <MobileText>
-                Mobile{' '}
+                {t('mobile')}{' '}
               </MobileText>
-               and {' '}
+               {t('and')} {' '}
               <WebText>
-               Web{' '}
+               {t('web')}{' '}
               </WebText>
-              Developer
+              {router.locale === 'en' && t('developer')}
             </Title>
             <Description>
-            Welcome to my portfolio!
-            I&apos;m a mobile and frontend developer with expertise
-            in iOS, Android, and React.
-            My goal is to create beautiful and functional applications
-            that exceed my client&apos;s expectations. Let&apos;s work together 
-            to bring your ideas to life!
+            {t('description')}
             </Description>
             <StartButton>
               <StartButtonText>
-                Get Started
+                {t('to-home')}
               </StartButtonText>
               <Image
                 src="/right-arrow.svg"

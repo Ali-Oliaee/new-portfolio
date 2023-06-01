@@ -1,11 +1,8 @@
-
+import { appWithTranslation } from 'next-i18next'
 import '@styles/global.css'
 
-function MyApp({ Component, pageProps }:{
-  Component: React.FC,
-  pageProps: any
-}) {
+function MyApp({ Component, pageProps }: any) {
   return <Component {...pageProps} />
 }
 
-export default MyApp
+export default appWithTranslation(MyApp)
