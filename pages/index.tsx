@@ -21,8 +21,22 @@ import {BluePill, BottomRightGradient,
   YellowOrbit
 } from '@styles/index'
 import Image from 'next/image'
+import {serverSideTranslations} from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
+import { useRouter } from 'next/router'
 
-const HomePage: React.FC = ()  =>{
+export async function getStaticProps({ locale }: any) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common']))
+    },
+  }
+}
+
+const HomePage: React.FC = (props) => {
+  const { t } = useTranslation()
+  const router = useRouter()
+  
   return (
     <Container>
       <TopLeftGradient/>
@@ -30,9 +44,12 @@ const HomePage: React.FC = ()  =>{
         <Header>
           <LogoName>Ali</LogoName>
           <HeaderMenu>
-            <LanguageSelect>
-              <LanguageOption>En</LanguageOption>
-              <LanguageOption>Fa</LanguageOption>
+            <LanguageSelect
+              value={router.locale}
+              onChange={(e) => router.push(router.pathname, router.pathname, { locale: e.target.value })}
+            >
+              <LanguageOption value='en'>En</LanguageOption>
+              <LanguageOption value='fr'>Fa</LanguageOption>
             </LanguageSelect>
             <Image
               src="/moon.svg"
@@ -47,6 +64,7 @@ const HomePage: React.FC = ()  =>{
             <Title>
               Hi! I’m Ali
             </Title>
+            <h1>{t('Hi')}</h1>
             <Title>
               <MobileText>
                 Mobile{' '}
