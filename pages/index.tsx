@@ -1,4 +1,6 @@
-import {BluePill, BottomRightGradient, 
+import {
+  BluePill,
+  BottomRightGradient, 
   Container,
   Content,
   Description,
@@ -7,8 +9,6 @@ import {BluePill, BottomRightGradient,
   HeaderMenu,
   ImageContainer,
   InfoContainer,
-  LanguageOption,
-  LanguageSelect,
   LogoName,
   MobileText,
   OrangeCube,
@@ -21,9 +21,9 @@ import {BluePill, BottomRightGradient,
   YellowOrbit
 } from '@styles/index'
 import Image from 'next/image'
-import {serverSideTranslations} from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
-import { useRouter } from 'next/router'
+import LanguageSelector from '@components/language-selector'
+import {serverSideTranslations} from 'next-i18next/serverSideTranslations'
 
 export async function getStaticProps({ locale }: any) {
   return {
@@ -35,7 +35,6 @@ export async function getStaticProps({ locale }: any) {
 
 const HomePage: React.FC = (props) => {
   const { t } = useTranslation()
-  const router = useRouter()
   
   return (
     <Container>
@@ -44,13 +43,7 @@ const HomePage: React.FC = (props) => {
         <Header>
           <LogoName>Ali</LogoName>
           <HeaderMenu>
-            <LanguageSelect
-              value={router.locale}
-              onChange={(e) => router.push(router.pathname, router.pathname, { locale: e.target.value })}
-            >
-              <LanguageOption value='en'>En</LanguageOption>
-              <LanguageOption value='fa'>Fa</LanguageOption>
-            </LanguageSelect>
+            <LanguageSelector/>
             <Image
               src="/moon.svg"
               alt="moon"
