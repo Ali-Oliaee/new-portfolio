@@ -21,6 +21,7 @@ import {
   YellowOrbit
 } from '@styles/index'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 import { useTranslation } from 'next-i18next'
 import LanguageSelector from '@components/language-selector'
 import {serverSideTranslations} from 'next-i18next/serverSideTranslations'
@@ -33,8 +34,9 @@ export async function getStaticProps({ locale }: any) {
   }
 }
 
-const HomePage: React.FC = (props) => {
+const HomePage: React.FC = () => {
   const { t } = useTranslation()
+  const router = useRouter()
   
   return (
     <Container>
@@ -58,6 +60,7 @@ const HomePage: React.FC = (props) => {
               {t('title1')}
             </Title>
             <Title>
+              {router.locale === 'fa' && t('developer')}{' '}
               <MobileText>
                 {t('mobile')}{' '}
               </MobileText>
@@ -65,7 +68,7 @@ const HomePage: React.FC = (props) => {
               <WebText>
                {t('web')}{' '}
               </WebText>
-              {t('developer')}
+              {router.locale === 'en' && t('developer')}
             </Title>
             <Description>
             {t('description')}
