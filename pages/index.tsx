@@ -62,30 +62,24 @@ const HomePage: React.FC = (props) => {
         <Content>
           <InfoContainer>
             <Title>
-              Hi! I’m Ali
+              {t('title1')}
             </Title>
-            <h1>{t('Hi')}</h1>
             <Title>
               <MobileText>
-                Mobile{' '}
+                {t('mobile')}{' '}
               </MobileText>
-               and {' '}
+               {t('and')} {' '}
               <WebText>
-               Web{' '}
+               {t('web')}{' '}
               </WebText>
-              Developer
+              {t('developer')}
             </Title>
             <Description>
-            Welcome to my portfolio!
-            I&apos;m a mobile and frontend developer with expertise
-            in iOS, Android, and React.
-            My goal is to create beautiful and functional applications
-            that exceed my client&apos;s expectations. Let&apos;s work together 
-            to bring your ideas to life!
+            {t('description')}
             </Description>
             <StartButton>
               <StartButtonText>
-                Get Started
+                {t('to-home')}
               </StartButtonText>
               <Image
                 src="/right-arrow.svg"
