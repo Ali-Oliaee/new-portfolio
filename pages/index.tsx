@@ -35,9 +35,10 @@ export async function getStaticProps({ locale }: any) {
   }
 }
 
-const HomePage: React.FC = ({themeToggler}: any) => {
+const HomePage: React.FC = ({themeToggler, theme}: any) => {
   const { t } = useTranslation()
   const router = useRouter()
+  
   
   return (
     <Container>
@@ -48,12 +49,22 @@ const HomePage: React.FC = ({themeToggler}: any) => {
           <HeaderMenu>
             <LanguageSelector/>
             <ThemeButton onClick={themeToggler}>
+              {theme === 'dark' ? (
+                <Image
+                src="/sun.svg"
+                alt="moon"
+                width={70}
+                height={70}
+                style={{borderRadius: 50, marginLeft: -30, marginRight: -10}}
+                />
+              ):(
               <Image
                 src="/moon.svg"
                 alt="moon"
                 width={30}
                 height={30}
-                />
+                />)
+              }
             </ThemeButton>
           </HeaderMenu>
         </Header>

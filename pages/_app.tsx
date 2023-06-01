@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }: any) {
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <>
         <GlobalStyles/>
-        <Component {...pageProps} themeToggler={themeToggler}/>
+        <Component {...pageProps} themeToggler={themeToggler} theme={theme}/>
       </>
     </ThemeProvider>
   )
