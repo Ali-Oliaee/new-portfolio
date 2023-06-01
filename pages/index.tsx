@@ -49,7 +49,7 @@ const HomePage: React.FC = (props) => {
               onChange={(e) => router.push(router.pathname, router.pathname, { locale: e.target.value })}
             >
               <LanguageOption value='en'>En</LanguageOption>
-              <LanguageOption value='fr'>Fa</LanguageOption>
+              <LanguageOption value='fa'>Fa</LanguageOption>
             </LanguageSelect>
             <Image
               src="/moon.svg"
