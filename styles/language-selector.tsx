@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const LanguageSelect = styled.select`
     min-width: 40px;
-    color: ${Colors.white};
+    color: ${({theme}) => theme.landingTitle};
     background: transparent;
     -webkit-appearance: none;
     -moz-appearance: none;

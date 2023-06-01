@@ -1,13 +1,17 @@
 export const lightTheme = {
-    body: '#FFF',
-    text: '#363537',
-    toggleBorder: '#FFF',
-    background: '#363537',
+    landingBackground: '#B8FFF9',
+    landingTitle: '#5D8BF4',
+    landingDescription: '#5D8BF4',
+    landingButton: '#FF91EA',
+    landingButtonText: '#F9FAFB',
+    landingHeader: '#FFFFFF'
 }
 
 export const darkTheme = {
-    body: '#363537',
-    text: '#FAFAFA',
-    toggleBorder: '#6B8096',
-    background: '#999',
+    landingBackground: '#1D1D1D',
+    landingTitle: '#F9FAFB',
+    landingDescription: '#E5E7EB',
+    landingButton: '#F2672E',
+    landingButtonText: '#F9FAFB',
+    landingHeader: '#FFFFFF'
 }

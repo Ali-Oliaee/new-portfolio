@@ -1,4 +1,3 @@
-import { Colors } from 'theme/colors'
 import styled from 'styled-components'
 import { BreakPoints } from 'theme/breakpoints'
 
@@ -7,8 +6,9 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background-color: ${({theme}) => theme.landingBackground};
     position: relative;
-    background-color: ${Colors.background};
+    transition: all 0.3s linear;
 `
 export const Glass = styled.div`
     display: flex;
@@ -44,7 +44,7 @@ export const HeaderMenu = styled.div`
 `
 export const LogoName = styled.h1`
     font-size: 1.5rem;
-    color: ${Colors.white};
+    color: ${({theme}) => theme.landingTitle};
     font-weight: 700;
     margin-inline-start: 30px;
 `
@@ -78,7 +78,7 @@ export const InfoContainer = styled.div`
 `
 export const Title = styled.h1`
     font-size: 2rem;
-    color: ${Colors.white};
+    color: ${({theme}) => theme.landingTitle};
     font-weight: 700;
     margin-block: 0;
 
@@ -101,7 +101,7 @@ export const WebText = styled.span`
 `
 export const Description = styled.p`
     font-size: 1.5em;
-    color: ${Colors.white};
+    color: ${({theme}) => theme.landingDescription};
     max-width: 600px;
 
     @media (max-width: ${BreakPoints.lg}px){
@@ -116,8 +116,8 @@ export const StartButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #F2672E;
-    color: ${Colors.white};
+    background-color: ${({theme}) => theme.landingButton};
+    color: ${({theme}) => theme.landingButtonText};
     margin-block: 20px;
     font-size: 1em;
     font-weight: 700;
@@ -153,8 +153,8 @@ export const TopLeftGradient = styled.div`
 export const BottomRightGradient = styled.div`
     position: absolute;
     bottom: -40px;
-    right: -40px;
     width: 15%;
+    right: -40px;
     filter: blur(100px);
     height: 25%;
     background: linear-gradient( #00C2FF 0%, #FF29C3 100%);
