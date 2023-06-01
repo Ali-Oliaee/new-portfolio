@@ -7,8 +7,8 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: ${Colors.background};
     position: relative;
+    background-color: ${Colors.background};
 `
 export const Glass = styled.div`
     display: flex;
@@ -29,6 +29,12 @@ export const Header = styled.div`
     justify-content: space-between;
     padding: 10px;
     width: 100%;
+`
+export const ThemeButton = styled.button`
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
 `
 export const HeaderMenu = styled.div`
     display: flex;
