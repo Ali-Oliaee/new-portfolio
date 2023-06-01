@@ -15,6 +15,7 @@ import {
   PurpleOrbit,
   StartButton,
   StartButtonText,
+  ThemeButton,
   Title,
   TopLeftGradient,
   WebText,
@@ -34,9 +35,10 @@ export async function getStaticProps({ locale }: any) {
   }
 }
 
-const HomePage: React.FC = () => {
+const HomePage: React.FC = ({themeToggler, theme}: any) => {
   const { t } = useTranslation()
   const router = useRouter()
+  
   
   return (
     <Container>
@@ -46,12 +48,24 @@ const HomePage: React.FC = () => {
           <LogoName>Ali</LogoName>
           <HeaderMenu>
             <LanguageSelector/>
-            <Image
-              src="/moon.svg"
-              alt="moon"
-              width={30}
-              height={30}
-            />
+            <ThemeButton onClick={themeToggler}>
+              {theme === 'dark' ? (
+                <Image
+                src="/sun.svg"
+                alt="moon"
+                width={70}
+                height={70}
+                style={{borderRadius: 50, marginLeft: -30, marginRight: -10}}
+                />
+              ):(
+              <Image
+                src="/moon.svg"
+                alt="moon"
+                width={30}
+                height={30}
+                />)
+              }
+            </ThemeButton>
           </HeaderMenu>
         </Header>
         <Content>
