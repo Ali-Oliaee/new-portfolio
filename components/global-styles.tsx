@@ -10,7 +10,7 @@ const GlobalStyles = createGlobalStyle`
     min-height: 100vh;
     width: 100%;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: Vazirmatn, Poppins, sans-serif;
   }
   `
 export default GlobalStyles
