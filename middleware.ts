@@ -1,10 +1,8 @@
-import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
-
-import { i18n } from './next-i18next.config'
-
-import { match as matchLocale } from '@formatjs/intl-localematcher'
 import Negotiator from 'negotiator'
+import { NextResponse } from 'next/server'
+import { i18n } from './next-i18next.config'
+import type { NextRequest } from 'next/server'
+import { match as matchLocale } from '@formatjs/intl-localematcher'
 
 function getLocale(request: NextRequest): string | undefined {
   // Negotiator expects plain object so we need to transform headers
@@ -23,14 +21,23 @@ export function middleware(request: NextRequest) {
 
   // `/_next/` and `/api/` are ignored by the watcher, but we need to ignore files in `public` manually.
   // If you have one
-  // if (
-  //   [
-  //     '/manifest.json',
-  //     '/favicon.ico',
-  //     // Your other files in `public`
-  //   ].includes(pathname)
-  // )
-  //   return
+  if (
+    [
+      '/manifest.json',
+      '/favicon.ico',
+      '/super-toroid-yellow-glossy.svg',
+      '/float-person.svg',
+      '/moon.svg',
+      '/right-arrow.svg',
+      '/favicon.png',                    
+      '/round-cube-orange-glossy.svg',
+      '/float-person.svg',
+      '/sun.svg',
+      '/pill-blue-glossy.svg',
+      '/super-toroid-yellow-glossy.svg'
+    ].includes(pathname)
+  )
+    return
 
   // Check if there is any supported locale in the pathname
   const pathnameIsMissingLocale = i18n.locales.every(

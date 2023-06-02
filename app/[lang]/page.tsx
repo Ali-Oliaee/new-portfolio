@@ -24,7 +24,6 @@ import { getDictionary } from '../../get-dictionary'
 import { Locale } from '../../next-i18next.config'
 import Image from 'next/image'
 import LanguageSelector from './components/language-selector'
-// import useTranslation from 'next-translate/useTranslation'
 
 export default async function HomePage({
   params: { lang },
@@ -83,48 +82,48 @@ export default async function HomePage({
               <StartButtonText>
                 {dictionary['to-home']}
               </StartButtonText>
-              {/* <Image
+              <Image
                 src="/right-arrow.svg"
                 alt="arrow-right"
                 width={30}
                 height={30}
-              /> */}
+              />
             </StartButton>
           </InfoContainer>
           <ImageContainer style={{width: '50%'}}>
-            {/* <Image
+            <Image
               src="/float-person.svg"
               alt="Picture of the author"
               layout='responsive'
               width={500}
               height={500}
-            /> */}
+            />
           </ImageContainer>
         </Content>
         <OrangeCube>
-          {/* <Image
+          <Image
             src='/round-cube-orange-glossy.svg'
             alt='orange cube'
             width={94}
             height={93}
-          /> */}
+          />
         </OrangeCube>
       </Glass>
       <BluePill>
-        {/* <Image
+        <Image
           src='/pill-blue-glossy.svg'
           alt='pill blue'
           width={151}
           height={230}
-        /> */}
+        />
       </BluePill>
       <YellowOrbit>
-        {/* <Image
+        <Image
           src='/super-toroid-yellow-glossy.svg'
           alt='super toroid yellow'
           width={200}
           height={280}
-        /> */}
+        />
       </YellowOrbit>
       <BottomRightGradient/>
     </Container>
