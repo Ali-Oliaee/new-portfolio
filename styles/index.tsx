@@ -1,3 +1,5 @@
+'use client'
+
 import { BreakPoints } from 'theme/breakpoints'
 import styled, {keyframes} from 'styled-components'
 

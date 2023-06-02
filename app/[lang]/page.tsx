@@ -20,25 +20,19 @@ import {
   WebText,
   YellowOrbit
 } from '@styles/index'
+import { getDictionary } from '../../get-dictionary'
+import { Locale } from '../../next-i18next.config'
 import Image from 'next/image'
-import { useRouter } from 'next/router'
-import { useTranslation } from 'next-i18next'
-import LanguageSelector from '@components/language-selector'
-import {serverSideTranslations} from 'next-i18next/serverSideTranslations'
+import LanguageSelector from './components/language-selector'
+// import useTranslation from 'next-translate/useTranslation'
 
-export async function getStaticProps({ locale }: any) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['common']))
-    },
-  }
-}
+export default async function HomePage({
+  params: { lang },
+}: {
+  params: { lang: Locale }
+}) {
+  const dictionary = await getDictionary(lang)
 
-const HomePage: React.FC = ({themeToggler, theme}: any) => {
-  const { t } = useTranslation()
-  const router = useRouter()
-  
-  
   return (
     <Container>
       <TopLeftGradient/>
@@ -47,8 +41,8 @@ const HomePage: React.FC = ({themeToggler, theme}: any) => {
           <LogoName>Ali</LogoName>
           <HeaderMenu>
             <LanguageSelector/>
-            <ThemeButton onClick={themeToggler}>
-              {theme === 'light' ? (
+            {/* <ThemeButton onClick={themeToggler}> */}
+              {/* {theme === 'light' ? (
                 <Image
                 src="/sun.svg"
                 alt="moon"
@@ -62,79 +56,78 @@ const HomePage: React.FC = ({themeToggler, theme}: any) => {
                 width={60}
                 height={60}
                 />)
-              }
-            </ThemeButton>
+              } */}
+            {/* </ThemeButton> */}
           </HeaderMenu>
         </Header>
         <Content>
           <InfoContainer>
             <Title>
-              {t('title1')}
+              {dictionary.title1}
             </Title>
             <Title>
-              {router.locale === 'fa' && t('developer')}{' '}
+              {/* {router.locale === 'fa' && t('developer')}{' '} */}
               <MobileText>
-                {t('mobile')}{' '}
+                {`${dictionary.mobile} `}
               </MobileText>
-               {t('and')} {' '}
+              {`${dictionary.and} `}
               <WebText>
-               {t('web')}{' '}
+              {`${dictionary.web} `}
               </WebText>
-              {router.locale === 'en' && t('developer')}
+              {/* {router.locale === 'en' && t('developer')} */}
             </Title>
             <Description>
-            {t('description')}
+            {`${dictionary.description}`}
             </Description>
             <StartButton>
               <StartButtonText>
-                {t('to-home')}
+                {dictionary['to-home']}
               </StartButtonText>
-              <Image
+              {/* <Image
                 src="/right-arrow.svg"
                 alt="arrow-right"
                 width={30}
                 height={30}
-              />
+              /> */}
             </StartButton>
           </InfoContainer>
           <ImageContainer style={{width: '50%'}}>
-            <Image
+            {/* <Image
               src="/float-person.svg"
               alt="Picture of the author"
               layout='responsive'
               width={500}
               height={500}
-            />
+            /> */}
           </ImageContainer>
         </Content>
         <OrangeCube>
-          <Image
+          {/* <Image
             src='/round-cube-orange-glossy.svg'
             alt='orange cube'
             width={94}
             height={93}
-          />
+          /> */}
         </OrangeCube>
       </Glass>
       <BluePill>
-        <Image
+        {/* <Image
           src='/pill-blue-glossy.svg'
           alt='pill blue'
           width={151}
           height={230}
-        />
+        /> */}
       </BluePill>
       <YellowOrbit>
-        <Image
+        {/* <Image
           src='/super-toroid-yellow-glossy.svg'
           alt='super toroid yellow'
           width={200}
           height={280}
-        />
+        /> */}
       </YellowOrbit>
       <BottomRightGradient/>
     </Container>
   )
 }
 
-export default  HomePage

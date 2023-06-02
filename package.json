@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@formatjs/intl-localematcher": "^0.2.32",
+    "@types/negotiator": "^0.6.1",
     "@types/node": "20.1.7",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
@@ -17,8 +19,10 @@
     "i18next": "^22.5.0",
     "i18next-browser-languagedetector": "^7.0.2",
     "i18next-http-backend": "^2.2.1",
+    "negotiator": "^0.6.3",
     "next": "13.4.2",
     "next-i18next": "^13.2.2",
+    "next-translate": "^2.0.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-i18next": "^12.3.1",
