@@ -12,7 +12,6 @@ import {
   LogoName,
   MobileText,
   OrangeCube,
-  PurpleOrbit,
   StartButton,
   StartButtonText,
   ThemeButton,
@@ -49,20 +48,19 @@ const HomePage: React.FC = ({themeToggler, theme}: any) => {
           <HeaderMenu>
             <LanguageSelector/>
             <ThemeButton onClick={themeToggler}>
-              {theme === 'dark' ? (
+              {theme === 'light' ? (
                 <Image
                 src="/sun.svg"
                 alt="moon"
-                width={70}
-                height={70}
-                style={{borderRadius: 50, marginLeft: -30, marginRight: -10}}
+                width={60}
+                height={60}
                 />
-              ):(
+              ) : (
               <Image
                 src="/moon.svg"
                 alt="moon"
-                width={30}
-                height={30}
+                width={60}
+                height={60}
                 />)
               }
             </ThemeButton>
@@ -109,14 +107,6 @@ const HomePage: React.FC = ({themeToggler, theme}: any) => {
             />
           </ImageContainer>
         </Content>
-        <PurpleOrbit>
-          <Image
-            src='/super-toroid-purple-glossy.svg'
-            alt='super toroid purple'
-            width={100}
-            height={74}
-          />
-        </PurpleOrbit>
         <OrangeCube>
           <Image
             src='/round-cube-orange-glossy.svg'

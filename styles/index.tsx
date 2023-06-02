@@ -1,6 +1,21 @@
-import styled from 'styled-components'
 import { BreakPoints } from 'theme/breakpoints'
+import styled, {keyframes} from 'styled-components'
 
+const wave20 = keyframes`
+    0% { margin-bottom: 0px; }
+    50% { margin-bottom: 20px }
+    100% { margin-bottom: 0px; }
+`
+const wave40 = keyframes`
+    0% { margin-bottom: 0px; }
+    50% { margin-bottom: 40px }
+    100% { margin-bottom: 0px; }
+`
+const gradient = keyframes` 
+    0% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
+`
 export const Container = styled.div`
     display: flex;
     align-items: center;
@@ -9,6 +24,7 @@ export const Container = styled.div`
     background-color: ${({theme}) => theme.landingBackground};
     position: relative;
     transition: all 0.3s linear;
+    overflow-x: hidden;
 `
 export const Glass = styled.div`
     display: flex;
@@ -16,7 +32,7 @@ export const Glass = styled.div`
     align-items: center;
     justify-content: flex-start;
     width: 90%;
-    height: 80%;
+    height: 84%;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     border-radius: 30px;
     backdrop-filter: blur(10px) brightness(120%) saturate(100%);
@@ -41,12 +57,20 @@ export const HeaderMenu = styled.div`
     align-items: center;
     justify-content: space-between;
     margin-inline-end: 30px;
+    
+    @media (max-width: ${BreakPoints.sm}px){
+        margin-inline-end: 10px;
+    }
 `
 export const LogoName = styled.h1`
     font-size: 1.5rem;
     color: ${({theme}) => theme.landingTitle};
     font-weight: 700;
     margin-inline-start: 30px;
+
+    @media (max-width: ${BreakPoints.sm}px){
+        margin-inline-start: 10px;
+    }
 `
 export const Content = styled.div` 
     display: flex;
@@ -146,9 +170,10 @@ export const TopLeftGradient = styled.div`
     width: 25%;
     filter: blur(100px);
     height: 35%;
-    background: linear-gradient( #00C2FF 0%, #FF29C3 80%);
+    background: linear-gradient( -45deg, #00C2FF 0%, #FF29C3 80%);
     border-radius: 50%;
     z-index: 1;
+    animation: ${gradient} 4s linear infinite;
 `
 export const BottomRightGradient = styled.div`
     position: absolute;
@@ -160,11 +185,13 @@ export const BottomRightGradient = styled.div`
     background: linear-gradient( #00C2FF 0%, #FF29C3 100%);
     border-radius: 50%;
     z-index: 1;
+    animation: ${gradient} 4s linear infinite;
 `
 export const OrangeCube = styled.div`
     position: absolute;
     bottom: -50px;
     right: 40%;
+    animation: ${wave20} 4s linear infinite;
 
     @media (max-width: ${BreakPoints.sm}px){
         top: 100px;
@@ -177,6 +204,7 @@ export const BluePill = styled.div`
     bottom: 120px;
     left: -20px;
     z-index: 100;
+    animation: ${wave40} 4s linear infinite;
 
     @media (max-width: ${BreakPoints.md}px){
         bottom: unset;
@@ -193,14 +221,6 @@ export const YellowOrbit = styled.div`
     bottom: -40px;
     right: -40px;
     z-index: 2;
-` 
-export const PurpleOrbit = styled.div`
-    position: absolute;
-    top: 80px;
-    right: 30%;
-    
-    @media (max-width: ${BreakPoints.sm}px){
-        right: unset;
-        left: 40px;
-    }
+    animation: ${wave40} 4s linear infinite;
+
 ` 

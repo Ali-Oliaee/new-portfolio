@@ -5,7 +5,7 @@ import { lightTheme, darkTheme } from "@theme/theme";
 import { useState } from 'react';
 
 function MyApp({ Component, pageProps }: any) {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
   const themeToggler = () => {
     theme === 'light' ? setTheme('dark') : setTheme('light')
   }
