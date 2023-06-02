@@ -11,6 +11,11 @@ const wave40 = keyframes`
     50% { margin-bottom: 40px }
     100% { margin-bottom: 0px; }
 `
+const gradient = keyframes` 
+    0% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
+`
 export const Container = styled.div`
     display: flex;
     align-items: center;
@@ -165,9 +170,10 @@ export const TopLeftGradient = styled.div`
     width: 25%;
     filter: blur(100px);
     height: 35%;
-    background: linear-gradient( #00C2FF 0%, #FF29C3 80%);
+    background: linear-gradient( -45deg, #00C2FF 0%, #FF29C3 80%);
     border-radius: 50%;
     z-index: 1;
+    animation: ${gradient} 4s linear infinite;
 `
 export const BottomRightGradient = styled.div`
     position: absolute;
@@ -179,6 +185,7 @@ export const BottomRightGradient = styled.div`
     background: linear-gradient( #00C2FF 0%, #FF29C3 100%);
     border-radius: 50%;
     z-index: 1;
+    animation: ${gradient} 4s linear infinite;
 `
 export const OrangeCube = styled.div`
     position: absolute;
