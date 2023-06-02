@@ -7,9 +7,9 @@ const wave20 = keyframes`
     100% { margin-bottom: 0px; }
 `
 const wave40 = keyframes`
-0% { margin-bottom: 0px; }
-50% { margin-bottom: 40px }
-100% { margin-bottom: 0px; }
+    0% { margin-bottom: 0px; }
+    50% { margin-bottom: 40px }
+    100% { margin-bottom: 0px; }
 `
 export const Container = styled.div`
     display: flex;
@@ -22,8 +22,8 @@ export const Container = styled.div`
     overflow-x: hidden;
 `
 export const Glass = styled.div`
-display: flex;
-flex-direction: column; 
+    display: flex;
+    flex-direction: column; 
     align-items: center;
     justify-content: flex-start;
     width: 90%;
@@ -216,14 +216,4 @@ export const YellowOrbit = styled.div`
     z-index: 2;
     animation: ${wave40} 4s linear infinite;
 
-` 
-export const PurpleOrbit = styled.div`
-    position: absolute;
-    top: 80px;
-    right: 30%;
-    
-    @media (max-width: ${BreakPoints.sm}px){
-        right: unset;
-        left: 40px;
-    }
 ` 

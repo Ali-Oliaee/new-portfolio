@@ -12,7 +12,6 @@ import {
   LogoName,
   MobileText,
   OrangeCube,
-  PurpleOrbit,
   StartButton,
   StartButtonText,
   ThemeButton,
@@ -108,14 +107,6 @@ const HomePage: React.FC = ({themeToggler, theme}: any) => {
             />
           </ImageContainer>
         </Content>
-        <PurpleOrbit>
-          <Image
-            src='/super-toroid-purple-glossy.svg'
-            alt='super toroid purple'
-            width={100}
-            height={74}
-          />
-        </PurpleOrbit>
         <OrangeCube>
           <Image
             src='/round-cube-orange-glossy.svg'
