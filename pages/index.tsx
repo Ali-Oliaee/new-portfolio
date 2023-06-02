@@ -53,15 +53,15 @@ const HomePage: React.FC = ({themeToggler, theme}: any) => {
                 <Image
                 src="/sun.svg"
                 alt="moon"
-                width={70}
-                height={70}
+                width={60}
+                height={60}
                 />
               ) : (
               <Image
                 src="/moon.svg"
                 alt="moon"
-                width={70}
-                height={70}
+                width={60}
+                height={60}
                 />)
               }
             </ThemeButton>

@@ -9,6 +9,7 @@ export const Container = styled.div`
     background-color: ${({theme}) => theme.landingBackground};
     position: relative;
     transition: all 0.3s linear;
+    overflow-x: hidden;
 `
 export const Glass = styled.div`
 display: flex;
@@ -16,7 +17,7 @@ flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     width: 90%;
-    height: 80%;
+    height: 84%;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     border-radius: 30px;
     backdrop-filter: blur(10px) brightness(120%) saturate(100%);
@@ -41,12 +42,20 @@ export const HeaderMenu = styled.div`
     align-items: center;
     justify-content: space-between;
     margin-inline-end: 30px;
+    
+    @media (max-width: ${BreakPoints.sm}px){
+        margin-inline-end: 10px;
+    }
 `
 export const LogoName = styled.h1`
     font-size: 1.5rem;
     color: ${({theme}) => theme.landingTitle};
     font-weight: 700;
     margin-inline-start: 30px;
+
+    @media (max-width: ${BreakPoints.sm}px){
+        margin-inline-start: 10px;
+    }
 `
 export const Content = styled.div` 
     display: flex;
