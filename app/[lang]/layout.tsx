@@ -1,4 +1,4 @@
-import {Vazirmatn} from '@next/font/google'
+import {Vazirmatn} from 'next/font/google'
 
 export const metadata = {
   title: 'Ali Oliaee | علی علیایی',
