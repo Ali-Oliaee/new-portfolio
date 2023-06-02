@@ -1,6 +1,16 @@
-import styled from 'styled-components'
 import { BreakPoints } from 'theme/breakpoints'
+import styled, {keyframes} from 'styled-components'
 
+const wave20 = keyframes`
+    0% { margin-bottom: 0px; }
+    50% { margin-bottom: 20px }
+    100% { margin-bottom: 0px; }
+`
+const wave40 = keyframes`
+0% { margin-bottom: 0px; }
+50% { margin-bottom: 40px }
+100% { margin-bottom: 0px; }
+`
 export const Container = styled.div`
     display: flex;
     align-items: center;
@@ -174,6 +184,7 @@ export const OrangeCube = styled.div`
     position: absolute;
     bottom: -50px;
     right: 40%;
+    animation: ${wave20} 4s linear infinite;
 
     @media (max-width: ${BreakPoints.sm}px){
         top: 100px;
@@ -186,6 +197,7 @@ export const BluePill = styled.div`
     bottom: 120px;
     left: -20px;
     z-index: 100;
+    animation: ${wave40} 4s linear infinite;
 
     @media (max-width: ${BreakPoints.md}px){
         bottom: unset;
@@ -202,6 +214,8 @@ export const YellowOrbit = styled.div`
     bottom: -40px;
     right: -40px;
     z-index: 2;
+    animation: ${wave40} 4s linear infinite;
+
 ` 
 export const PurpleOrbit = styled.div`
     position: absolute;
