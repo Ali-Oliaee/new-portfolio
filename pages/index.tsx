@@ -49,20 +49,19 @@ const HomePage: React.FC = ({themeToggler, theme}: any) => {
           <HeaderMenu>
             <LanguageSelector/>
             <ThemeButton onClick={themeToggler}>
-              {theme === 'dark' ? (
+              {theme === 'light' ? (
                 <Image
                 src="/sun.svg"
                 alt="moon"
                 width={70}
                 height={70}
-                style={{borderRadius: 50, marginLeft: -30, marginRight: -10}}
                 />
-              ):(
+              ) : (
               <Image
                 src="/moon.svg"
                 alt="moon"
-                width={30}
-                height={30}
+                width={70}
+                height={70}
                 />)
               }
             </ThemeButton>
