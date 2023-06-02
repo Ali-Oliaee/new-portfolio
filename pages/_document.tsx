@@ -12,6 +12,8 @@ export default function Document() {
           rel="stylesheet"
         />  
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;700&family=Roboto:wght@100;400;700&family=Vazirmatn:wght@100;400;700&display=swap" rel="stylesheet"/>
+        <title>Ali Oliaee | علی علیایی</title>
+        <link rel="shortcut icon" href="/favicon.png" />
       </Head>
       <body>
         <Main />
