@@ -49,27 +49,3 @@ header
 
     @include sm-breakpoint
         display: flex
-
-.burger-icon
-    height: 4px
-    width: 30px
-    position: relative
-
-.burger-icon::after
-    content: ''
-    height: 4px
-    width: 16px
-    position: absolute
-    top: 10px
-
-[data-theme='light'] .burger-icon
-    background: $landingTitleLight
-
-[data-theme='dark'] .burger-icon
-    background: $landingTitleDark
-
-[data-theme='light'] .burger-icon::after
-    background: $landingTitleLight
-
-[data-theme='dark'] .burger-icon::after
-    background: $landingTitleDark

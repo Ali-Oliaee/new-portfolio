@@ -2,6 +2,7 @@ import './styles.sass'
 import Link from "next/link"
 import ThemeSwitcher from "@components/theme-switcher"
 import LanguageSelector from "@components/language-selector/language-selector"
+import Drawer from '@components/drawer'
 
 const Header: React.FC = () => {
     return (
@@ -17,9 +18,9 @@ const Header: React.FC = () => {
                 <LanguageSelector/>
                 <ThemeSwitcher/>
             </div>
-            <button className="burger-button">
-                <span className="burger-icon"/>
-            </button>
+            <div className="burger-button">
+                <Drawer/>
+            </div>
         </header>
     )
 }
