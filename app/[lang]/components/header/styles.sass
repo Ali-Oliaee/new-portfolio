@@ -1,0 +1,75 @@
+@import '@theme/theme'
+@import '@theme/breakpoints'
+
+header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 10px 40px
+
+    @include md-breakpoint
+        padding: 10px 20px
+
+[data-theme='light'] .logo
+    color: $landingTitleLight
+
+[data-theme='dark'] .logo
+    color: $landingTitleDark
+
+.options
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    @include sm-breakpoint
+        display: none
+
+.nav
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-inline-end: 14px
+
+.nav-link
+    padding-inline: 10px
+    color: #Fff
+
+[data-theme='light'] .nav-link
+    color: $landingTitleLight
+
+[data-theme='dark'] .nav-link
+    color: $landingTitleDark
+
+.burger-button
+    display: none
+    padding: 20px
+    border: 0
+    background: transparent
+    cursor: pointer
+
+    @include sm-breakpoint
+        display: flex
+
+.burger-icon
+    height: 4px
+    width: 30px
+    position: relative
+
+.burger-icon::after
+    content: ''
+    height: 4px
+    width: 16px
+    position: absolute
+    top: 10px
+
+[data-theme='light'] .burger-icon
+    background: $landingTitleLight
+
+[data-theme='dark'] .burger-icon
+    background: $landingTitleDark
+
+[data-theme='light'] .burger-icon::after
+    background: $landingTitleLight
+
+[data-theme='dark'] .burger-icon::after
+    background: $landingTitleDark

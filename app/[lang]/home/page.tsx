@@ -1,5 +1,7 @@
+import Header from "@components/header"
+
 const HomePage: React.FC = () => {
-    return <h1>Home</h1>
+    return <Header/>
 }
 
 export default HomePage
