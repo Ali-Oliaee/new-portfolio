@@ -24,8 +24,8 @@ export default async function HomePage({
             <LanguageSelector/>
             <ThemeSwitcher/>
           </div>
-          </div>
-          <div className="content">
+        </div>
+        <div className="content">
           <div className="infoContainer">
             <h1 className="title">
               {dictionary.title1}
@@ -37,22 +37,22 @@ export default async function HomePage({
               </span>
               {`${dictionary.and} `}
               <span className="webText">
-              {`${dictionary.web} `}
+                {`${dictionary.web} `}
               </span>
               {lang === 'en' &&  ` ${dictionary.developer}`}
             </div>
-              <p className="description">
-            {`${dictionary.description}`}
-              </p>
-              <button className="startButton">
-                {dictionary['to-home']}
+            <p className="description">
+              {`${dictionary.description}`}
+            </p>
+            <button className="startButton">
+              {dictionary['to-home']}
               <Image
                 src="/right-arrow.svg"
                 alt="arrow-right"
                 width={30}
                 height={30}
-                />
-                </button>
+              />
+            </button>
           </div>
           <div className="imageContainer">
             <Image
@@ -61,36 +61,36 @@ export default async function HomePage({
               layout='responsive'
               width={500}
               height={500}
-              />
-              </div>
+            />
+          </div>
         </div>
-      <div className="orangeCube">
+        <div className="orangeCube">
           <Image
             src='/round-cube-orange-glossy.svg'
             alt='orange cube'
             width={94}
             height={93}
-            />
-            </div>
+          />
         </div>
-        <div className="bluePill">
+      </div>
+      <div className="bluePill">
         <Image
           src='/pill-blue-glossy.svg'
           alt='pill blue'
           width={151}
           height={230}
-          />
-          </div>
-        <div className="yellowOrbit">
+        />
+      </div>
+      <div className="yellowOrbit">
         <Image
           src='/super-toroid-yellow-glossy.svg'
           alt='super toroid yellow'
           width={200}
           height={280}
-          />
-          </div>
-          <div className="bottomRightGradient"/>
+        />
       </div>
+      <div className="bottomRightGradient"/>
+    </div>
   )
 }
 
