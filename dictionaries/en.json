@@ -9,5 +9,8 @@
     "home": "Home",
     "about": "About",
     "experience": "Experience",
-    "contact": "Contact"
+    "contact": "Contact",
+    "fullName":"Ali Oliaee",
+    "role": "Mobile and Frontend Developer",
+    "socialTitle": "Connect with me"
 }
