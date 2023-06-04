@@ -2,7 +2,11 @@
 import { Locale } from '../../next-i18next.config'
 
 declare global {
-    type LanguageProp = {
+    type LanguageParam = {
         params: { lang: Locale }
     }
+    type LanguageProp = {
+        lang: Locale
+    }
+
 }
