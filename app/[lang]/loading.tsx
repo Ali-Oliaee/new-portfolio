@@ -7,26 +7,26 @@ const Loading: React.FC = () => {
       <div className='loading-bar'/>
       <h1 className='loading-title'>Please Wait</h1>
       <Image
-      className='union'
+        className='union1'
         src="/union.svg"
         alt="loading"
         width={200}
         height={200}
-        />
-         <Image
-      className='union union1'
+      />
+      <Image
+        className='union2'
         src="/union1.svg"
         alt="loading"
         width={200}
         height={200}
-        />
-         <Image
-      className='union union2'
+      />
+      <Image
+        className='union3'
         src="/union2.svg"
         alt="loading"
-        width={200}
-        height={200}
-        />
+        width={140}
+        height={140}
+      />
     </div>
   )
 }
