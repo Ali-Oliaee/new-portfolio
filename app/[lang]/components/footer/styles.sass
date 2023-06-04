@@ -1,3 +1,6 @@
+@import '@theme/theme'
+@import '@theme/breakpoints'
+
 footer
     padding: 10px 20px
     border-top: 1px solid #fff
@@ -6,6 +9,9 @@ footer
     display: flex
     align-items: center
     justify-content: space-between
+
+    @include sm-breakpoint
+        flex-direction: column
 
 .general
     display: flex
@@ -16,9 +22,43 @@ footer
     color: #ABB2BF
     margin-inline-start: 18px
 
+.about
+    @include sm-breakpoint
+        text-align: center
+
 .social
     text-align: center
 
 .copyright
     text-align: center
     color: #ABB2BF
+
+[data-theme='light'] .email
+    color: $landingTitleLight
+
+[data-theme='dark'] .email
+    color: $landingTitleDark
+
+[data-theme='light'] .social h4
+    color: $landingTitleLight
+
+[data-theme='dark'] .social h4
+    color: $landingTitleDark
+
+[data-theme='light'] .general h3
+    color: $landingTitleLight
+
+[data-theme='dark'] .general h3
+    color: $landingTitleDark
+
+[data-theme='light'] .about
+    color: $landingTitleLight
+
+[data-theme='dark'] .about
+    color: $landingTitleDark
+
+[data-theme='light'] .copyright
+    color: $landingTitleLight
+
+[data-theme='dark'] .copyright
+    color: $landingTitleDark

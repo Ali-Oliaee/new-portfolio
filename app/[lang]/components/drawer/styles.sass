@@ -19,7 +19,7 @@
     background: transparent
     cursor: pointer
     position: relative
-    z-index: 99
+    z-index: 9999
 
 .close-icon
     height: 2px
@@ -68,6 +68,7 @@
     flex-direction: column
     align-items: flex-start
     justify-content: center
+    z-index: 999
 
 .drawer-link
     text-align: center
@@ -101,3 +102,9 @@
 
 [data-theme='dark'] .drawer-link
     color: $landingTitleDark
+
+[data-theme='light'] .drawer-content
+    background: $landingBackgroundLight
+
+[data-theme='dark'] .drawer-content
+    background: $landingBackgroundDark
