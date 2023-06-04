@@ -20,6 +20,7 @@ const LanguageSelector = () => {
     onChange={
       (e) => router.push(redirectedPathName(e.target.value))
     }
+    value={pathName.split('/')[1]}
     >
       <option value="en">En</option>
       <option value="fa">Fa</option>
