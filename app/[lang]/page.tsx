@@ -6,7 +6,7 @@ import {ThemeSwitcher,LanguageSelector} from './components'
 
 export default async function HomePage({
   params: { lang },
-}: LanguageProp) {
+}: LanguageParam) {
   const dictionary = await getDictionary(lang)
 
   return (
