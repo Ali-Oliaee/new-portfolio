@@ -30,7 +30,10 @@ export function middleware(request: NextRequest) {
       '/float-person.svg',
       '/sun.svg',
       '/pill-blue-glossy.svg',
-      '/super-toroid-yellow-glossy.svg'
+      '/super-toroid-yellow-glossy.svg',
+      '/union.svg',
+      '/union1.svg',
+      '/union2.svg'
     ].includes(pathname)
   )
     return

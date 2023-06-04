@@ -1,14 +1,32 @@
+import '@styles/loading.sass'
+import Image from 'next/image'
+
 const Loading: React.FC = () => {
   return(
-    <div style={{
-      minHeight: '100vh',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      flexDirection: 'column',
-      backgroundColor: 'red',
-    }}>
-      <h3>please wait...</h3>
+    <div className='loading-screen'>
+      <div className='loading-bar'/>
+      <h1 className='loading-title'>Please Wait</h1>
+      <Image
+      className='union'
+        src="/union.svg"
+        alt="loading"
+        width={200}
+        height={200}
+        />
+         <Image
+      className='union union1'
+        src="/union1.svg"
+        alt="loading"
+        width={200}
+        height={200}
+        />
+         <Image
+      className='union union2'
+        src="/union2.svg"
+        alt="loading"
+        width={200}
+        height={200}
+        />
     </div>
   )
 }
