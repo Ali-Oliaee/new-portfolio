@@ -1,9 +1,10 @@
 'use client'
 
+import Props from "./types"
 import { ThemeProvider } from "next-themes"
 
 
-const LocalThemeProvider = ({children}: any) => {
+const LocalThemeProvider: React.FC<Props> = ({children}) => {
     return (
         <ThemeProvider>
             {children}

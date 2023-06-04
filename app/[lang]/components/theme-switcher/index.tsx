@@ -5,8 +5,8 @@ import Image from "next/image"
 import { useTheme } from "next-themes"
 import { useState, useEffect } from "react"
 
-const ThemeSwitcher = () => {
-    const [mounted, setMounted] = useState(false)
+const ThemeSwitcher: React.FC = () => {
+    const [mounted, setMounted] = useState<boolean>(false)
     const {theme, setTheme} = useTheme()
     const themeToggler = () => 
         theme === 'light' ? setTheme('dark') : setTheme('light')

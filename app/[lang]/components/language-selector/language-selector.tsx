@@ -4,7 +4,7 @@ import './styles.sass'
 import { useRouter } from 'next/navigation'
 import { usePathname } from 'next/navigation'
 
-const LanguageSelector = () => {
+const LanguageSelector: React.FC = () => {
     const router = useRouter()
     const pathName = usePathname()
     const redirectedPathName = (locale: string) => {
