@@ -1,4 +1,4 @@
-import Header from '@components/header'
+import {Header} from '../components'
 
 const HomePage: React.FC = ({params:{lang}}:LanguageProp) => {
   return <Header lang={lang}/>

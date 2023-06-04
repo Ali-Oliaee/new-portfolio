@@ -3,11 +3,9 @@
 import './styles.sass'
 import Link from 'next/link'
 import { useState } from 'react'
-import Props from '@components/header/props'
 import { getDictionary } from 'get-dictionary'
-import SocialMedias from '@components/social-medias'
-import ThemeSwitcher from '@components/theme-switcher'
-import LanguageSelector from '@components/language-selector'
+import Props from '../../components/header/props'
+import {LanguageSelector,ThemeSwitcher,SocialMedias} from '..'
 
 export default async function Drawer  ({lang}: Props) {
   const [ visible, setVisible ] = useState<boolean>(false)

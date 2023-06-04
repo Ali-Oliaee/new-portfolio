@@ -2,8 +2,7 @@ import Link from 'next/link'
 import '@styles/landing.sass'
 import Image from 'next/image'
 import { getDictionary } from 'get-dictionary'
-import ThemeSwitcher from '@components/theme-switcher'
-import LanguageSelector from '@components/language-selector'
+import {ThemeSwitcher,LanguageSelector} from './components'
 
 export default async function HomePage({
   params: { lang },

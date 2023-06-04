@@ -1,10 +1,8 @@
 import './styles.sass'
 import Props from './props'
 import Link from 'next/link'
-import Drawer from '@components/drawer'
 import { getDictionary } from 'get-dictionary'
-import ThemeSwitcher from '@components/theme-switcher'
-import LanguageSelector from '@components/language-selector'
+import {Drawer,ThemeSwitcher,LanguageSelector} from '..'
 
 export default async function Header ({lang}: Props) {
   const dictionary = await getDictionary(lang)
