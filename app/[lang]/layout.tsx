@@ -1,4 +1,5 @@
 import {Vazirmatn} from 'next/font/google'
+import '@styles/global.sass'
 
 export const metadata = {
   title: 'Ali Oliaee | علی علیایی',
