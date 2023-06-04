@@ -1,5 +1,5 @@
-import {Vazirmatn} from 'next/font/google'
 import '@styles/global.sass'
+import {Vazirmatn} from 'next/font/google'
 import LocalThemeProvider from '@components/local-theme-provider'
 
 export const metadata = {

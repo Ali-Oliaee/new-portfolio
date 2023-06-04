@@ -1,9 +1,9 @@
 'use client'
 
-import { useTheme } from "next-themes"
-import Image from "next/image"
-import { useState, useEffect } from "react"
 import './styles.sass'
+import Image from "next/image"
+import { useTheme } from "next-themes"
+import { useState, useEffect } from "react"
 
 const ThemeSwitcher = () => {
     const [mounted, setMounted] = useState(false)
