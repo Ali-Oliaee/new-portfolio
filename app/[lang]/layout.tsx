@@ -1,5 +1,6 @@
 import {Vazirmatn} from 'next/font/google'
 import '@styles/global.sass'
+import LocalThemeProvider from '@components/local-theme-provider'
 
 export const metadata = {
   title: 'Ali Oliaee | علی علیایی',
@@ -24,7 +25,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={vazirmatn.className}>
-        {children}
+        <LocalThemeProvider>
+          {children}
+        </LocalThemeProvider>
       </body>
     </html>
   )

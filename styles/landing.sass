@@ -1,12 +1,19 @@
+@import '@theme/theme'
+
 .container
     display: flex
     align-items: center
     justify-content: center
     height: 100vh
-    // background-color: $(theme) > theme.landingBackground
     position: relative
     transition: all 0.3s linear
     overflow-x: hidden
+
+[data-theme='light'] .container
+    background: $landingBackgroundLight
+
+[data-theme='dark'] .container
+    background: $landingBackgroundDark
 
 // keyframes 
 //     0% { margin-bottom: 0px; }
@@ -43,12 +50,6 @@
     padding: 10px
     width: 100%
 
-.themeButton
-    background-color: transparent
-    border: none
-    cursor: pointer
-    outline: none
-
 .headerMenu
     display: flex
     align-items: center
@@ -63,6 +64,12 @@
     // color: $(theme) > theme.landingTitle
     font-weight: 700
     margin-inline-start: 30px
+
+[data-theme='light'] .logoName
+    color: $landingTitleLight
+
+[data-theme='dark'] .logoName
+    color: $landingTitleDark
 
     // @media (max-width: $BreakPoints.smpx)
     //     margin-inline-start: 10px
@@ -95,9 +102,14 @@
 
 .title
     font-size: 2rem
-    // color: $(theme) > theme.landingTitle
     font-weight: 700
     margin-block: 0
+
+[data-theme='light'] .title
+    color: $landingTitleLight
+
+[data-theme='dark'] .title
+    color: $landingTitleDark
 
     // @media (max-width: $BreakPoints.smpx)
     //     text-align: center
@@ -117,8 +129,13 @@
 
 .description
     font-size: 1.5em
-    // color: $(theme) > theme.landingDescription
     max-width: 600px
+
+[data-theme='light'] .description
+    color: $landingDescriptionLight
+
+[data-theme='dark'] .description
+    color: $landingDescriptionDark
 
     // @media (max-width: $BreakPoints.lgpx)
     //     font-size: 1.1em
@@ -145,6 +162,14 @@
     &:hover
         background-color: #EF4444
         padding-inline-start: 50px
+
+[data-theme='light'] .startButton
+    background: $landingButtonLight
+    color: $landingButtonTextLight
+
+[data-theme='dark'] .startButton
+    background: $landingButtonLight
+    color: $landingButtonTextDark
 
     // @media (max-width: $BreakPoints.smpx)
     //     align-self: center

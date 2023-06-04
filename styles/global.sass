@@ -1,3 +1,5 @@
+@import '@theme/theme'
+
 body
     transition: all 0.3s linear
     margin: 0
@@ -6,3 +8,9 @@ body
     width: 100%
     box-sizing: border-box
     font-family: Vazirmatn, Poppins, sans-serif
+
+[data-theme='light'] body
+    background: $landingBackgroundLight
+
+[data-theme='dark'] body
+    background: $landingBackgroundDark

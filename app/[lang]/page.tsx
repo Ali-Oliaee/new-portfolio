@@ -3,6 +3,7 @@ import { Locale } from '../../next-i18next.config'
 import Image from 'next/image'
 import LanguageSelector from './components/language-selector'
 import '@styles/landing.sass'
+import ThemeSwitcher from '@components/theme-switcher'
 
 export default async function HomePage({
   params: { lang },
@@ -21,23 +22,7 @@ export default async function HomePage({
           </h1>
           <div className="headerMenu">
             <LanguageSelector/>
-            {/* <ThemeButton onClick={themeToggler}> */}
-              {/* {theme === 'light' ? (
-                <Image
-                src="/sun.svg"
-                alt="moon"
-                width={60}
-                height={60}
-                />
-              ) : (
-              <Image
-                src="/moon.svg"
-                alt="moon"
-                width={60}
-                height={60}
-                />)
-              } */}
-            {/* </ThemeButton> */}
+            <ThemeSwitcher/>
           </div>
           </div>
           <div className="content">
