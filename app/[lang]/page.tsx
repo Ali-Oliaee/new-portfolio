@@ -13,7 +13,7 @@ export default async function HomePage({
   const dictionary = await getDictionary(lang)
 
   return (
-    <div className="container">
+    <div className="container" dir={lang === 'en' ? 'ltr' : 'rtl'}>
       <div className="topLeftGradient"></div>
       <div className="glass">
         <div className="header">
@@ -31,15 +31,15 @@ export default async function HomePage({
               {dictionary.title1}
             </h1>
             <div className="title">
-              {/* {router.locale === 'fa' && t('developer')}{' '} */}
-              <h1 className="mobileText">
+              {lang === 'fa' && `${dictionary.developer} `}
+              <span className="mobileText">
                 {`${dictionary.mobile} `}
-              </h1>
+              </span>
               {`${dictionary.and} `}
-              <h1 className="webText">
+              <span className="webText">
               {`${dictionary.web} `}
-              </h1>
-              {/* {router.locale === 'en' && t('developer')} */}
+              </span>
+              {lang === 'en' &&  ` ${dictionary.developer}`}
             </div>
               <p className="description">
             {`${dictionary.description}`}
@@ -64,7 +64,7 @@ export default async function HomePage({
               />
               </div>
         </div>
-<div className="orangeCube">
+      <div className="orangeCube">
           <Image
             src='/round-cube-orange-glossy.svg'
             alt='orange cube'
