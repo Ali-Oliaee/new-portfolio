@@ -3,12 +3,15 @@
 import './styles.sass'
 import Link from 'next/link'
 import { useState } from 'react'
+import Props from '@components/header/props'
+import { getDictionary } from 'get-dictionary'
 import SocialMedias from '@components/social-medias'
 import ThemeSwitcher from '@components/theme-switcher'
-import LanguageSelector from '@components/language-selector/language-selector'
+import LanguageSelector from '@components/language-selector'
 
-const Drawer: React.FC = () => {
+export default async function Drawer  ({lang}: Props) {
   const [ visible, setVisible ] = useState<boolean>(false)
+  const dictionary = await getDictionary(lang)
 
   return(
     <>
@@ -27,10 +30,16 @@ const Drawer: React.FC = () => {
             <div className="drawer-option">
               <ThemeSwitcher/>
             </div>
-            <Link className="drawer-link" href="#">Home</Link>
-            <Link className="drawer-link" href="#about">About</Link>
-            <Link className="drawer-link" href="#experience">Experience</Link>
-            <Link className="drawer-link" href="#contact">Contact</Link>
+            <Link className="drawer-link" href="#">{dictionary.home}</Link>
+            <Link className="drawer-link" href="#about">
+              {dictionary.about}
+            </Link>
+            <Link className="drawer-link" href="#experience">
+              {dictionary.experience}
+            </Link>
+            <Link className="drawer-link" href="#contact">
+              {dictionary.contact}
+            </Link>
             <div className="drawer-option">
               <LanguageSelector/>
             </div>
@@ -50,5 +59,3 @@ const Drawer: React.FC = () => {
     </>
   )
 }
-
-export default Drawer
