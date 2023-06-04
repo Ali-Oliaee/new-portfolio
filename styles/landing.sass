@@ -1,0 +1,243 @@
+@import '@theme/theme'
+@import '@theme/breakpoints'
+
+.container
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 100vh
+    position: relative
+    transition: all 0.3s linear
+    overflow-x: hidden
+
+[data-theme='light'] .container
+    background: $landingBackgroundLight
+
+[data-theme='dark'] .container
+    background: $landingBackgroundDark
+
+@keyframes wave20
+    0%
+        margin-bottom: 0px
+    50%
+        margin-bottom: 20px
+    100%
+        margin-bottom: 0px
+
+@keyframes wave40
+    0%
+        margin-bottom: 0px
+    50%
+        margin-bottom: 40px
+    100%
+        margin-bottom: 0px
+
+@keyframes  gradient
+    0%
+        background-position: 0% 50%
+    50%
+        background-position: 100% 50%
+    100%
+        background-position: 0% 50%
+
+.glass
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+    width: 90%
+    height: 84%
+    border: 1px solid rgba( 255, 255, 255, 0.18 )
+    border-radius: 30px
+    backdrop-filter: blur(10px) brightness(120%) saturate(100%)
+    position: relative
+    z-index: 99
+
+.header
+    align-items: center
+    display: flex
+    justify-content: space-between
+    padding: 10px
+    width: 100%
+
+.headerMenu
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-inline-end: 30px
+
+    @include sm-breakpoint
+        margin-inline-end: 10px
+
+.logoName
+    font-size: 1.5rem
+    font-weight: 700
+    margin-inline-start: 30px
+
+[data-theme='light'] .logoName
+    color: $landingTitleLight
+
+[data-theme='dark'] .logoName
+    color: $landingTitleDark
+
+    @include sm-breakpoint
+        margin-inline-start: 10px
+
+.content
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-inline: 40px
+
+    @include md-breakpoint
+        padding-inline: 20px
+
+    @include sm-breakpoint
+        flex-direction: column-reverse
+
+.imageContainer
+    width: 50%
+
+.infoContainer
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+    max-width: 50%
+
+    @include sm-breakpoint
+        text-align: center
+        max-width: 100%
+
+.title
+    font-size: 2rem
+    font-weight: 700
+    margin-block: 0
+
+[data-theme='light'] .title
+    color: $landingTitleLight
+
+[data-theme='dark'] .title
+    color: $landingTitleDark
+
+    @include sm-breakpoint
+        text-align: center
+        width: 100%
+
+.mobileText
+    font-size: 2rem
+    background: linear-gradient(to bottom, #F59E0B, #EF4444)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+.webText
+    font-size: 2rem
+    background: linear-gradient(to bottom, #EC4899, #8B5CF6)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+.description
+    font-size: 1.5em
+    max-width: 600px
+
+[data-theme='light'] .description
+    color: $landingDescriptionLight
+
+[data-theme='dark'] .description
+    color: $landingDescriptionDark
+
+    @include lg-breakpoint
+        font-size: 1.1em
+
+    @include sm-breakpoint
+        text-align: center
+        max-width: 100%
+
+.startButton
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-block: 20px
+    font-size: 1em
+    font-weight: 700
+    border-radius: 10px
+    padding: 10px 40px
+    border: none
+    cursor: pointer
+    transition: 0.3s
+
+    &:hover
+        background-color: #EF4444
+        padding-inline-start: 50px
+
+[data-theme='light'] .startButton
+    background: $landingButtonLight
+    color: $landingButtonTextLight
+
+[data-theme='dark'] .startButton
+    background: $landingButtonLight
+    color: $landingButtonTextDark
+
+    @include sm-breakpoint
+        font-size: 1.1em
+        align-self: center
+
+.startButtonText  span
+    margin-inline-end: 10px
+
+.topLeftGradient
+    position: absolute
+    top: -40px
+    left: -40px
+    width: 25%
+    filter: blur(100px)
+    height: 35%
+    background: linear-gradient( -45deg, #00C2FF 0%, #FF29C3 80%)
+    border-radius: 50%
+    z-index: 1
+    animation: gradient 4s linear infinite
+
+.bottomRightGradient
+    position: absolute
+    bottom: -40px
+    width: 15%
+    right: -40px
+    filter: blur(100px)
+    height: 25%
+    background: linear-gradient( #00C2FF 0%, #FF29C3 100%)
+    border-radius: 50%
+    z-index: 1
+    animation: gradient 4s linear infinite
+
+.orangeCube
+    position: absolute
+    bottom: -50px
+    right: 40%
+    animation: wave20 4s linear infinite
+
+    @include sm-breakpoint
+        top: 100px
+        right: -40px
+        bottom: unset
+
+.bluePill
+    position: absolute
+    bottom: 120px
+    left: -20px
+    z-index: 100
+    animation: wave40 4s linear infinite
+
+    @include md-breakpoint
+        bottom: unset
+        top: 0px
+        z-index: 1
+
+    @include sm-breakpoint
+        bottom: -40px
+
+.yellowOrbit
+    position: absolute
+    bottom: -40px
+    right: -40px
+    z-index: 2
+    animation: wave40 4s linear infinite
