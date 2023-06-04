@@ -1,7 +1,7 @@
 import { getDictionary } from '../../get-dictionary'
 import { Locale } from '../../next-i18next.config'
 import Image from 'next/image'
-import LanguageSelector from './components/language-selector'
+import LanguageSelector from './components/language-selector/language-selector'
 import '@styles/landing.sass'
 import ThemeSwitcher from '@components/theme-switcher'
 

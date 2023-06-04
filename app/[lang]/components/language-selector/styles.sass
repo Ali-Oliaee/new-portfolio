@@ -1,0 +1,20 @@
+@import '@theme/theme'
+
+.languageSelector
+    min-width: 40px
+    background: transparent
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    border: 0
+    font-size: 1.1em
+    font-weight: bold
+    outline: 0
+    margin-inline-end: 10px
+    cursor: pointer
+
+[data-theme='light'] .languageSelector
+    color: $landingTitleLight
+
+[data-theme='dark'] .languageSelector
+    color: $landingTitleDark
