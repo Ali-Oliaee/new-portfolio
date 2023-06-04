@@ -4,6 +4,7 @@ import { Locale } from '../../next-i18next.config'
 import { getDictionary } from '../../get-dictionary'
 import ThemeSwitcher from '@components/theme-switcher'
 import LanguageSelector from './components/language-selector/language-selector'
+import Link from 'next/link'
 
 export default async function HomePage({
   params: { lang },
@@ -44,6 +45,7 @@ export default async function HomePage({
             <p className="description">
               {`${dictionary.description}`}
             </p>
+              <Link href={`/${lang}/home`}>
             <button className="startButton">
               {dictionary['to-home']}
               <Image
@@ -53,6 +55,7 @@ export default async function HomePage({
                 height={30}
               />
             </button>
+            </Link>
           </div>
           <div className="imageContainer">
             <Image
