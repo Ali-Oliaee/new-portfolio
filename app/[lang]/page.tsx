@@ -45,16 +45,16 @@ export default async function HomePage({
             <p className="description">
               {`${dictionary.description}`}
             </p>
-              <Link href={`/${lang}/home`}>
-            <button className="startButton">
-              {dictionary['to-home']}
-              <Image
-                src="/right-arrow.svg"
-                alt="arrow-right"
-                width={30}
-                height={30}
-              />
-            </button>
+            <Link href={`/${lang}/home`}>
+              <button className="startButton">
+                {dictionary['to-home']}
+                <Image
+                  src="/right-arrow.svg"
+                  alt="arrow-right"
+                  width={30}
+                  height={30}
+                />
+              </button>
             </Link>
           </div>
           <div className="imageContainer">
