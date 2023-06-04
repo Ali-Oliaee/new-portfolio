@@ -1,7 +1,5 @@
 'use client'
 
-import { useRouter } from "next/navigation"
-import { LanguageOption, LanguageSelect } from "@styles/language-selector"
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { i18n } from '../../../next-i18next.config'

@@ -1,29 +1,8 @@
-import {
-  BluePill,
-  BottomRightGradient, 
-  Container,
-  Content,
-  Description,
-  Glass,
-  Header,
-  HeaderMenu,
-  ImageContainer,
-  InfoContainer,
-  LogoName,
-  MobileText,
-  OrangeCube,
-  StartButton,
-  StartButtonText,
-  ThemeButton,
-  Title,
-  TopLeftGradient,
-  WebText,
-  YellowOrbit
-} from '@styles/index'
 import { getDictionary } from '../../get-dictionary'
 import { Locale } from '../../next-i18next.config'
 import Image from 'next/image'
 import LanguageSelector from './components/language-selector'
+import '@styles/landing.sass'
 
 export default async function HomePage({
   params: { lang },
@@ -33,12 +12,14 @@ export default async function HomePage({
   const dictionary = await getDictionary(lang)
 
   return (
-    <Container>
-      <TopLeftGradient/>
-      <Glass>
-        <Header>
-          <LogoName>Ali</LogoName>
-          <HeaderMenu>
+    <div className="container">
+      <div className="topLeftGradient"></div>
+      <div className="glass">
+        <div className="header">
+          <h1 className="logoName">
+            Ali
+          </h1>
+          <div className="headerMenu">
             <LanguageSelector/>
             {/* <ThemeButton onClick={themeToggler}> */}
               {/* {theme === 'light' ? (
@@ -57,76 +38,74 @@ export default async function HomePage({
                 />)
               } */}
             {/* </ThemeButton> */}
-          </HeaderMenu>
-        </Header>
-        <Content>
-          <InfoContainer>
-            <Title>
+          </div>
+          </div>
+          <div className="content">
+          <div className="infoContainer">
+            <h1 className="title">
               {dictionary.title1}
-            </Title>
-            <Title>
+            </h1>
+            <div className="title">
               {/* {router.locale === 'fa' && t('developer')}{' '} */}
-              <MobileText>
+              <h1 className="mobileText">
                 {`${dictionary.mobile} `}
-              </MobileText>
+              </h1>
               {`${dictionary.and} `}
-              <WebText>
+              <h1 className="webText">
               {`${dictionary.web} `}
-              </WebText>
+              </h1>
               {/* {router.locale === 'en' && t('developer')} */}
-            </Title>
-            <Description>
+            </div>
+              <p className="description">
             {`${dictionary.description}`}
-            </Description>
-            <StartButton>
-              <StartButtonText>
+              </p>
+              <button className="startButton">
                 {dictionary['to-home']}
-              </StartButtonText>
               <Image
                 src="/right-arrow.svg"
                 alt="arrow-right"
                 width={30}
                 height={30}
-              />
-            </StartButton>
-          </InfoContainer>
-          <ImageContainer style={{width: '50%'}}>
+                />
+                </button>
+          </div>
+          <div className="imageContainer">
             <Image
               src="/float-person.svg"
               alt="Picture of the author"
               layout='responsive'
               width={500}
               height={500}
-            />
-          </ImageContainer>
-        </Content>
-        <OrangeCube>
+              />
+              </div>
+        </div>
+<div className="orangeCube">
           <Image
             src='/round-cube-orange-glossy.svg'
             alt='orange cube'
             width={94}
             height={93}
-          />
-        </OrangeCube>
-      </Glass>
-      <BluePill>
+            />
+            </div>
+        </div>
+        <div className="bluePill">
         <Image
           src='/pill-blue-glossy.svg'
           alt='pill blue'
           width={151}
           height={230}
-        />
-      </BluePill>
-      <YellowOrbit>
+          />
+          </div>
+        <div className="yellowOrbit">
         <Image
           src='/super-toroid-yellow-glossy.svg'
           alt='super toroid yellow'
           width={200}
           height={280}
-        />
-      </YellowOrbit>
-      <BottomRightGradient/>
-    </Container>
+          />
+          </div>
+          <div className="bottomRightGradient"/>
+      </div>
   )
 }
 

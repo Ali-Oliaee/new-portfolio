@@ -1,4 +1,3 @@
-import GlobalStyles from '@components/global-styles'
 import {Vazirmatn} from 'next/font/google'
 
 export const metadata = {
@@ -24,7 +23,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={vazirmatn.className}>
-        <GlobalStyles/>
         {children}
       </body>
     </html>
