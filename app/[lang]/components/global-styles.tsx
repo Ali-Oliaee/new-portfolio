@@ -2,10 +2,10 @@
 
 import { createGlobalStyle} from "styled-components"
 
+// background: ${({ theme }) => theme.body};
+// color: ${({ theme }) => theme.text};
 const GlobalStyles = createGlobalStyle`
   body {
-    background: ${({ theme }) => theme.body};
-    color: ${({ theme }) => theme.text};
     transition: all 0.3s linear;
     margin: 0;
     padding: 0;
