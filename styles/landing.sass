@@ -1,21 +1,6 @@
 @import '@theme/theme'
 @import '@theme/breakpoints'
 
-.container
-    display: flex
-    align-items: center
-    justify-content: center
-    height: 100vh
-    position: relative
-    transition: all 0.3s linear
-    overflow-x: hidden
-
-[data-theme='light'] .container
-    background: $landingBackgroundLight
-
-[data-theme='dark'] .container
-    background: $landingBackgroundDark
-
 @keyframes wave20
     0%
         margin-bottom: 0px
@@ -40,22 +25,37 @@
     100%
         background-position: 0% 50%
 
+.container
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 100vh
+    position: relative
+    transition: all 0.3s linear
+    overflow: hidden
+
+[data-theme='light'] .container
+    background: $landingBackgroundLight
+
+[data-theme='dark'] .container
+    background: $landingBackgroundDark
+
 .glass
     display: flex
     flex-direction: column
     align-items: center
     justify-content: flex-start
     width: 90%
-    height: 84%
     border: 1px solid rgba( 255, 255, 255, 0.18 )
+    padding-bottom: 30px
     border-radius: 30px
     backdrop-filter: blur(10px) brightness(120%) saturate(100%)
     position: relative
     z-index: 99
 
 .header
-    align-items: center
     display: flex
+    align-items: center
     justify-content: space-between
     padding: 10px
     width: 100%
@@ -74,14 +74,14 @@
     font-weight: 700
     margin-inline-start: 30px
 
+    @include sm-breakpoint
+        margin-inline-start: 10px
+
 [data-theme='light'] .logoName
     color: $landingTitleLight
 
 [data-theme='dark'] .logoName
     color: $landingTitleDark
-
-    @include sm-breakpoint
-        margin-inline-start: 10px
 
 .content
     display: flex
@@ -97,6 +97,10 @@
 
 .imageContainer
     width: 50%
+
+    @include sm-breakpoint
+        text-align: center
+        width: 100%
 
 .infoContainer
     display: flex
@@ -114,15 +118,15 @@
     font-weight: 700
     margin-block: 0
 
+    @include sm-breakpoint
+        text-align: center
+        width: 100%
+
 [data-theme='light'] .title
     color: $landingTitleLight
 
 [data-theme='dark'] .title
     color: $landingTitleDark
-
-    @include sm-breakpoint
-        text-align: center
-        width: 100%
 
 .mobileText
     font-size: 2rem
@@ -140,18 +144,18 @@
     font-size: 1.5em
     max-width: 600px
 
-[data-theme='light'] .description
-    color: $landingDescriptionLight
-
-[data-theme='dark'] .description
-    color: $landingDescriptionDark
-
     @include lg-breakpoint
         font-size: 1.1em
 
     @include sm-breakpoint
         text-align: center
         max-width: 100%
+
+[data-theme='light'] .description
+    color: $landingDescriptionLight
+
+[data-theme='dark'] .description
+    color: $landingDescriptionDark
 
 .startButton
     display: flex
@@ -166,23 +170,27 @@
     cursor: pointer
     transition: 0.3s
 
-    &:hover
-        background-color: #EF4444
-        padding-inline-start: 50px
+    @include sm-breakpoint
+        font-size: 1.1em
+        align-self: center
 
 [data-theme='light'] .startButton
     background: $landingButtonLight
     color: $landingButtonTextLight
 
+    &:hover
+        background: #EF4444
+        padding-inline-start: 50px
+
 [data-theme='dark'] .startButton
-    background: $landingButtonLight
+    background: $landingButtonDark
     color: $landingButtonTextDark
 
-    @include sm-breakpoint
-        font-size: 1.1em
-        align-self: center
+    &:hover
+        background: #EF4444
+        padding-inline-start: 50px
 
-.startButtonText  span
+.startButtonText
     margin-inline-end: 10px
 
 .topLeftGradient

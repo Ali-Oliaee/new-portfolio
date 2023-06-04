@@ -33,7 +33,12 @@ export function middleware(request: NextRequest) {
       '/super-toroid-yellow-glossy.svg',
       '/union.svg',
       '/union1.svg',
-      '/union2.svg'
+      '/union2.svg',
+      '/social-media/github.svg',
+      '/social-media/google.svg',
+      '/social-media/instagram.svg',
+      '/social-media/linkedin.svg',
+      '/social-media/whatsapp.svg',
     ].includes(pathname)
   )
     return

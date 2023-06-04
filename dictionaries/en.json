@@ -5,5 +5,12 @@
     "and": "and",
     "web": "Web",
     "developer": "Developer",
-    "to-home": "Home"
+    "to-home": "Home",
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "contact": "Contact",
+    "fullName":"Ali Oliaee",
+    "role": "Mobile and Frontend Developer",
+    "socialTitle": "Connect with me"
 }

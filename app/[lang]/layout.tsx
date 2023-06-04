@@ -1,6 +1,6 @@
 import '@styles/global.sass'
 import {Vazirmatn} from 'next/font/google'
-import LocalThemeProvider from '@components/local-theme-provider'
+import {LocalThemeProvider} from './components'
 
 export const metadata = {
   title: 'Ali Oliaee | علی علیایی',
