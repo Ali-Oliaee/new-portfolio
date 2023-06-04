@@ -3,8 +3,11 @@ import Link from 'next/link'
 import Drawer from '@components/drawer'
 import ThemeSwitcher from '@components/theme-switcher'
 import LanguageSelector from '@components/language-selector/language-selector'
+import { getDictionary } from 'get-dictionary'
 
-const Header: React.FC = () => {
+export default async function Header ({params: {lang}}:LanguageProp) {
+  const dictionary = await getDictionary(lang)
+
   return (
     <header>
       <h2 className='logo'>Ali Oliaee</h2>
@@ -24,5 +27,3 @@ const Header: React.FC = () => {
     </header>
   )
 }
-
-export default Header

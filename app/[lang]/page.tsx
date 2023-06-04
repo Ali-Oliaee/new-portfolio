@@ -1,16 +1,13 @@
+import Link from 'next/link'
 import '@styles/landing.sass'
 import Image from 'next/image'
-import { Locale } from '../../next-i18next.config'
 import { getDictionary } from '../../get-dictionary'
 import ThemeSwitcher from '@components/theme-switcher'
 import LanguageSelector from './components/language-selector/language-selector'
-import Link from 'next/link'
 
 export default async function HomePage({
   params: { lang },
-}: {
-  params: { lang: Locale }
-}) {
+}: LanguageProp) {
   const dictionary = await getDictionary(lang)
 
   return (
