@@ -1,0 +1,103 @@
+@import '@theme/theme'
+
+.burger-icon
+    height: 4px
+    width: 30px
+    position: relative
+
+.burger-icon::after
+    content: ''
+    height: 4px
+    width: 16px
+    position: absolute
+    top: 10px
+
+.close-button
+    display: flex
+    padding: 20px
+    border: 0
+    background: transparent
+    cursor: pointer
+    position: relative
+    z-index: 99
+
+.close-icon
+    height: 2px
+    width: 30px
+    transform: rotate(45deg)
+    position: relative
+
+.close-icon::after
+    content: ''
+    height: 2px
+    width: 30px
+    transform: rotate(-90deg)
+    position: absolute
+    left: 0
+
+[data-theme='light'] .burger-icon
+    background: $landingTitleLight
+
+[data-theme='dark'] .burger-icon
+    background: $landingTitleDark
+
+[data-theme='light'] .burger-icon::after
+    background: $landingTitleLight
+
+[data-theme='dark'] .burger-icon::after
+    background: $landingTitleDark
+
+[data-theme='light'] .close-icon
+    background: $landingTitleLight
+
+[data-theme='dark'] .close-icon
+    background: $landingTitleDark
+
+[data-theme='light'] .close-icon::after
+    background: $landingTitleLight
+
+[data-theme='dark'] .close-icon::after
+    background: $landingTitleDark
+
+.drawer-content
+    position: absolute
+    width: 100%
+    left: 0
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: center
+
+.drawer-link
+    text-align: center
+    padding: 10px
+    margin: 0 auto
+    font-size: 1.3em
+
+.drawer-option
+    text-align: center
+    padding: 10px 0
+    margin: 0 auto
+
+.divider
+    width: 70%
+    height: 2px
+    margin: 20px auto
+
+.drawer-footer
+    width: 100%
+    position: absolute
+    bottom: 50px
+
+[data-theme='light'] .divider
+    background: $landingTitleLight
+
+[data-theme='dark'] .divider
+    background: $landingTitleDark
+
+[data-theme='light'] .drawer-link
+    color: $landingTitleLight
+
+[data-theme='dark'] .drawer-link
+    color: $landingTitleDark
