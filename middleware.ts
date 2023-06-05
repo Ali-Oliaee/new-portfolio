@@ -2,6 +2,7 @@ import Negotiator from 'negotiator'
 import { NextResponse } from 'next/server'
 import { i18n } from './next-i18next.config'
 import type { NextRequest } from 'next/server'
+import { ignoredLocales } from 'utils/ignored-locales'
 import { match as matchLocale } from '@formatjs/intl-localematcher'
 
 function getLocale(request: NextRequest): string | undefined {
@@ -18,29 +19,7 @@ export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
 
   if (
-    [
-      '/manifest.json',
-      '/favicon.ico',
-      '/super-toroid-yellow-glossy.svg',
-      '/float-person.svg',
-      '/moon.svg',
-      '/right-arrow.svg',
-      '/favicon.png',                    
-      '/round-cube-orange-glossy.svg',
-      '/float-person.svg',
-      '/sun.svg',
-      '/pill-blue-glossy.svg',
-      '/super-toroid-yellow-glossy.svg',
-      '/union.svg',
-      '/union1.svg',
-      '/union2.svg',
-      '/social-media/github.svg',
-      '/social-media/google.svg',
-      '/social-media/instagram.svg',
-      '/social-media/linkedin.svg',
-      '/social-media/whatsapp.svg',
-      '/me.jpeg'
-    ].includes(pathname)
+    ignoredLocales.includes(pathname)
   )
     return
 
