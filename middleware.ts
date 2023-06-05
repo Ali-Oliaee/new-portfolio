@@ -39,6 +39,7 @@ export function middleware(request: NextRequest) {
       '/social-media/instagram.svg',
       '/social-media/linkedin.svg',
       '/social-media/whatsapp.svg',
+      '/me.jpeg'
     ].includes(pathname)
   )
     return
