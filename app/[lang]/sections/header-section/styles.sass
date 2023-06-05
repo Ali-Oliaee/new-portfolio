@@ -1,7 +1,92 @@
+@import '@theme/theme'
+@import '@theme/breakpoints'
+
 .container
     display: flex
     align-items: center
     justify-content: space-between
     padding-inline: 30px
+    margin-top: 30px
+
+    @include sm-breakpoint
+        flex-direction: column-reverse
 
 .info-container
+    width: 50%
+
+    @include sm-breakpoint
+        width: 100%
+
+.title
+    max-width: 350px
+
+    @include sm-breakpoint
+        text-align: center
+        max-width: unset
+        width: 100%
+
+[data-theme='light'] .title
+    color: $landingTitleLight
+
+[data-theme='dark'] .title
+    color: $landingTitleDark
+
+.description
+    @include sm-breakpoint
+        text-align: center
+
+[data-theme='light'] .description
+    color: $landingDescriptionLight
+
+[data-theme='dark'] .description
+    color: $landingDescriptionDark
+
+.contact-button
+    border: 1px solid #C778DD
+    background: transparent
+    padding: 10px 16px
+    cursor: pointer
+
+.footer
+    @include sm-breakpoint
+        text-align: center
+
+[data-theme='light'] .contact-button
+    color: $landingDescriptionLight
+
+[data-theme='dark'] .contact-button
+    color: $landingDescriptionDark
+
+.status-box
+    border: 1px solid #ABB2BF
+    padding-inline-end: 20px
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    position: absolute
+    width: 100%
+    bottom: 0
+    z-index: 99
+
+[data-theme='light'] .status-box
+    background: $landingBackgroundLight
+
+[data-theme='dark'] .status-box
+    background: $landingBackgroundDark
+
+.status-icon
+    background: #C778DD
+    width: 14px
+    height: 14px
+    margin-inline: 8px
+
+.status
+    margin-block: 6px
+    font-size: .8em
+
+.image-container
+    position: relative
+    margin-inline-end: 10px
+
+.image
+    border-radius: 50%
