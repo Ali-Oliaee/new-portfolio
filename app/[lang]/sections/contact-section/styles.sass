@@ -1,0 +1,60 @@
+@import '@theme/theme'
+@import '@theme/breakpoints'
+
+.contact-section-container
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-inline: 30px
+    margin-top: 30px
+
+    @include sm-breakpoint
+        flex-direction: column-reverse
+
+.info-container
+    width: 50%
+
+    @include sm-breakpoint
+        width: 100%
+
+.row
+    display: flex
+    align-items: center
+    margin-bottom: 20px
+
+    .info
+        margin-inline-start: 20px
+
+[data-theme='light'] .row .info
+    color: $landingDescriptionLight
+
+[data-theme='dark'] .row .info
+    color: $landingDescriptionDark
+
+form
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    justify-content: center
+    width: 100%
+
+    input,
+    textarea
+        width: 100%
+        padding: 10px
+        margin-bottom: 20px
+        border-radius: 5px
+        outline: none
+        max-width: 400px
+
+    button
+        padding: 10px 20px
+        border: none
+        outline: none
+        cursor: pointer
+        font-size: 16px
+        background: transparent
+        color: #C778DD
+        font-weight: 600
+        transition: all 0.3s ease-in-out
+        border: 1px solid #C778DD
