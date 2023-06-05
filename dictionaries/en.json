@@ -12,5 +12,9 @@
     "contact": "Contact",
     "fullName":"Ali Oliaee",
     "role": "Mobile and Frontend Developer",
-    "socialTitle": "Connect with me"
+    "socialTitle": "Connect with me",
+    "headerSectionTitle": "Frontend & Mobile developer and a codoholic person",
+    "headerSectionDescription": "My name is Ali Oliaee and I am studying for a bachelor's degree in computer engineering at Qiet. I'm 21 and I'm interested messing with computers and tech stuff. The purpose of this portfolio is the presentation of the personal projects I have worked on, and the skills I have acquired over the years.",
+    "contactMe": "Contact Me",
+    "workStatus": "Work from home"
 }
